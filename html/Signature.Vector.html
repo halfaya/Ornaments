@@ -1,0 +1,883 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Signature.Vector</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Keyword"
+      >module</a
+      ><a name="7"
+      > </a
+      ><a name="8" href="Signature.Vector.html#1" class="Module"
+      >Signature.Vector</a
+      ><a name="24"
+      > </a
+      ><a name="25" class="Keyword"
+      >where</a
+      ><a name="30"
+      >
+
+</a
+      ><a name="32" class="Keyword"
+      >open</a
+      ><a name="36"
+      > </a
+      ><a name="37" class="Keyword"
+      >import</a
+      ><a name="43"
+      > </a
+      ><a name="44" class="Module"
+      >Stdlib</a
+      ><a name="50"
+      >
+</a
+      ><a name="51" class="Keyword"
+      >open</a
+      ><a name="55"
+      > </a
+      ><a name="56" class="Keyword"
+      >import</a
+      ><a name="62"
+      > </a
+      ><a name="63" href="Signature.html#1" class="Module"
+      >Signature</a
+      ><a name="72"
+      >
+
+</a
+      ><a name="74" class="Keyword"
+      >module</a
+      ><a name="80"
+      > </a
+      ><a name="81" href="Signature.Vector.html#81" class="Module"
+      >Model</a
+      ><a name="86"
+      > </a
+      ><a name="87" class="Keyword"
+      >where</a
+      ><a name="92"
+      >
+
+  </a
+      ><a name="96" class="Keyword"
+      >data</a
+      ><a name="100"
+      > </a
+      ><a name="101" href="Signature.Vector.html#101" class="Datatype"
+      >Vec</a
+      ><a name="104"
+      > </a
+      ><a name="105" class="Symbol"
+      >(</a
+      ><a name="106" href="Signature.Vector.html#106" class="Bound"
+      >A</a
+      ><a name="107"
+      > </a
+      ><a name="108" class="Symbol"
+      >:</a
+      ><a name="109"
+      > </a
+      ><a name="110" class="PrimitiveType"
+      >Set</a
+      ><a name="113" class="Symbol"
+      >)</a
+      ><a name="114"
+      > </a
+      ><a name="115" class="Symbol"
+      >:</a
+      ><a name="116"
+      > </a
+      ><a name="117" href="Stdlib.html#768" class="Datatype"
+      >&#8469;</a
+      ><a name="118"
+      > </a
+      ><a name="119" class="Symbol"
+      >&#8594;</a
+      ><a name="120"
+      > </a
+      ><a name="121" class="PrimitiveType"
+      >Set</a
+      ><a name="124"
+      > </a
+      ><a name="125" class="Keyword"
+      >where</a
+      ><a name="130"
+      >
+    </a
+      ><a name="135" href="Signature.Vector.html#135" class="InductiveConstructor"
+      >nil</a
+      ><a name="138"
+      > </a
+      ><a name="139" class="Symbol"
+      >:</a
+      ><a name="140"
+      > </a
+      ><a name="141" href="Signature.Vector.html#101" class="Datatype"
+      >Vec</a
+      ><a name="144"
+      > </a
+      ><a name="145" href="Signature.Vector.html#106" class="Bound"
+      >A</a
+      ><a name="146"
+      > </a
+      ><a name="147" class="Number"
+      >0</a
+      ><a name="148"
+      >
+    </a
+      ><a name="153" href="Signature.Vector.html#153" class="InductiveConstructor"
+      >cons</a
+      ><a name="157"
+      > </a
+      ><a name="158" class="Symbol"
+      >:</a
+      ><a name="159"
+      > </a
+      ><a name="160" class="Symbol"
+      >&#8704;</a
+      ><a name="161"
+      > </a
+      ><a name="162" href="Signature.Vector.html#162" class="Bound"
+      >n</a
+      ><a name="163"
+      > </a
+      ><a name="164" class="Symbol"
+      >&#8594;</a
+      ><a name="165"
+      > </a
+      ><a name="166" class="Symbol"
+      >(</a
+      ><a name="167" href="Signature.Vector.html#167" class="Bound"
+      >a</a
+      ><a name="168"
+      > </a
+      ><a name="169" class="Symbol"
+      >:</a
+      ><a name="170"
+      > </a
+      ><a name="171" href="Signature.Vector.html#106" class="Bound"
+      >A</a
+      ><a name="172" class="Symbol"
+      >)(</a
+      ><a name="174" href="Signature.Vector.html#174" class="Bound"
+      >xs</a
+      ><a name="176"
+      > </a
+      ><a name="177" class="Symbol"
+      >:</a
+      ><a name="178"
+      > </a
+      ><a name="179" href="Signature.Vector.html#101" class="Datatype"
+      >Vec</a
+      ><a name="182"
+      > </a
+      ><a name="183" href="Signature.Vector.html#106" class="Bound"
+      >A</a
+      ><a name="184"
+      > </a
+      ><a name="185" href="Signature.Vector.html#162" class="Bound"
+      >n</a
+      ><a name="186" class="Symbol"
+      >)</a
+      ><a name="187"
+      > </a
+      ><a name="188" class="Symbol"
+      >&#8594;</a
+      ><a name="189"
+      > </a
+      ><a name="190" href="Signature.Vector.html#101" class="Datatype"
+      >Vec</a
+      ><a name="193"
+      > </a
+      ><a name="194" href="Signature.Vector.html#106" class="Bound"
+      >A</a
+      ><a name="195"
+      > </a
+      ><a name="196" class="Symbol"
+      >(</a
+      ><a name="197" href="Stdlib.html#795" class="InductiveConstructor"
+      >suc</a
+      ><a name="200"
+      > </a
+      ><a name="201" href="Signature.Vector.html#162" class="Bound"
+      >n</a
+      ><a name="202" class="Symbol"
+      >)</a
+      ><a name="203"
+      >
+    
+
+</a
+      ><a name="210" href="Signature.Vector.html#210" class="Function"
+      >&#931;Vec</a
+      ><a name="214"
+      > </a
+      ><a name="215" class="Symbol"
+      >:</a
+      ><a name="216"
+      > </a
+      ><a name="217" class="PrimitiveType"
+      >Set</a
+      ><a name="220"
+      > </a
+      ><a name="221" class="Symbol"
+      >&#8594;</a
+      ><a name="222"
+      > </a
+      ><a name="223" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="226"
+      > </a
+      ><a name="227" href="Stdlib.html#768" class="Datatype"
+      >&#8469;</a
+      ><a name="228"
+      >
+</a
+      ><a name="229" href="Signature.Vector.html#210" class="Function"
+      >&#931;Vec</a
+      ><a name="233"
+      > </a
+      ><a name="234" href="Signature.Vector.html#234" class="Bound"
+      >A</a
+      ><a name="235"
+      > </a
+      ><a name="236" class="Symbol"
+      >=</a
+      ><a name="237"
+      > </a
+      ><a name="238" href="Signature.Vector.html#299" class="Function"
+      >OpVec</a
+      ><a name="243"
+      > </a
+      ><a name="244" href="Signature.html#302" class="InductiveConstructor Operator"
+      >&#9667;</a
+      ><a name="245"
+      > </a
+      ><a name="246" class="Symbol"
+      >(&#955;</a
+      ><a name="248"
+      > </a
+      ><a name="249" class="Symbol"
+      >{</a
+      ><a name="250" href="Signature.Vector.html#250" class="Bound"
+      >n</a
+      ><a name="251" class="Symbol"
+      >}</a
+      ><a name="252"
+      > </a
+      ><a name="253" class="Symbol"
+      >&#8594;</a
+      ><a name="254"
+      > </a
+      ><a name="255" href="Signature.Vector.html#370" class="Function"
+      >ArVec</a
+      ><a name="260"
+      > </a
+      ><a name="261" href="Signature.Vector.html#250" class="Bound"
+      >n</a
+      ><a name="262" class="Symbol"
+      >)</a
+      ><a name="263"
+      > </a
+      ><a name="264" href="Signature.html#302" class="InductiveConstructor Operator"
+      >/</a
+      ><a name="265"
+      > </a
+      ><a name="266" class="Symbol"
+      >(&#955;</a
+      ><a name="268"
+      > </a
+      ><a name="269" class="Symbol"
+      >{</a
+      ><a name="270" href="Signature.Vector.html#270" class="Bound"
+      >n</a
+      ><a name="271" class="Symbol"
+      >}{</a
+      ><a name="273" href="Signature.Vector.html#273" class="Bound"
+      >op</a
+      ><a name="275" class="Symbol"
+      >}</a
+      ><a name="276"
+      > </a
+      ><a name="277" class="Symbol"
+      >&#8594;</a
+      ><a name="278"
+      > </a
+      ><a name="279" href="Signature.Vector.html#462" class="Function"
+      >TyVec</a
+      ><a name="284"
+      > </a
+      ><a name="285" href="Signature.Vector.html#270" class="Bound"
+      >n</a
+      ><a name="286"
+      > </a
+      ><a name="287" href="Signature.Vector.html#273" class="Bound"
+      >op</a
+      ><a name="289" class="Symbol"
+      >)</a
+      ><a name="290"
+      >
+  </a
+      ><a name="293" class="Keyword"
+      >where</a
+      ><a name="298"
+      > </a
+      ><a name="299" href="Signature.Vector.html#299" class="Function"
+      >OpVec</a
+      ><a name="304"
+      > </a
+      ><a name="305" class="Symbol"
+      >:</a
+      ><a name="306"
+      > </a
+      ><a name="307" href="Stdlib.html#768" class="Datatype"
+      >&#8469;</a
+      ><a name="308"
+      > </a
+      ><a name="309" class="Symbol"
+      >&#8594;</a
+      ><a name="310"
+      > </a
+      ><a name="311" class="PrimitiveType"
+      >Set</a
+      ><a name="314"
+      >
+        </a
+      ><a name="323" href="Signature.Vector.html#299" class="Function"
+      >OpVec</a
+      ><a name="328"
+      > </a
+      ><a name="329" href="Stdlib.html#784" class="InductiveConstructor"
+      >0</a
+      ><a name="330"
+      > </a
+      ><a name="331" class="Symbol"
+      >=</a
+      ><a name="332"
+      > </a
+      ><a name="333" href="Stdlib.html#718" class="Record"
+      >&#8868;</a
+      ><a name="334"
+      >
+        </a
+      ><a name="343" href="Signature.Vector.html#299" class="Function"
+      >OpVec</a
+      ><a name="348"
+      > </a
+      ><a name="349" class="Symbol"
+      >(</a
+      ><a name="350" href="Stdlib.html#795" class="InductiveConstructor"
+      >suc</a
+      ><a name="353"
+      > </a
+      ><a name="354" href="Signature.Vector.html#354" class="Bound"
+      >n</a
+      ><a name="355" class="Symbol"
+      >)</a
+      ><a name="356"
+      > </a
+      ><a name="357" class="Symbol"
+      >=</a
+      ><a name="358"
+      > </a
+      ><a name="359" href="Signature.Vector.html#234" class="Bound"
+      >A</a
+      ><a name="360"
+      >
+
+        </a
+      ><a name="370" href="Signature.Vector.html#370" class="Function"
+      >ArVec</a
+      ><a name="375"
+      > </a
+      ><a name="376" class="Symbol"
+      >:</a
+      ><a name="377"
+      > </a
+      ><a name="378" class="Symbol"
+      >(</a
+      ><a name="379" href="Signature.Vector.html#379" class="Bound"
+      >n</a
+      ><a name="380"
+      > </a
+      ><a name="381" class="Symbol"
+      >:</a
+      ><a name="382"
+      > </a
+      ><a name="383" href="Stdlib.html#768" class="Datatype"
+      >&#8469;</a
+      ><a name="384" class="Symbol"
+      >)</a
+      ><a name="385"
+      > </a
+      ><a name="386" class="Symbol"
+      >&#8594;</a
+      ><a name="387"
+      > </a
+      ><a name="388" href="Signature.Vector.html#299" class="Function"
+      >OpVec</a
+      ><a name="393"
+      > </a
+      ><a name="394" href="Signature.Vector.html#379" class="Bound"
+      >n</a
+      ><a name="395"
+      > </a
+      ><a name="396" class="Symbol"
+      >&#8594;</a
+      ><a name="397"
+      > </a
+      ><a name="398" class="PrimitiveType"
+      >Set</a
+      ><a name="401"
+      >
+        </a
+      ><a name="410" href="Signature.Vector.html#370" class="Function"
+      >ArVec</a
+      ><a name="415"
+      > </a
+      ><a name="416" href="Stdlib.html#784" class="InductiveConstructor"
+      >0</a
+      ><a name="417"
+      > </a
+      ><a name="418" href="Stdlib.html#746" class="InductiveConstructor"
+      >tt</a
+      ><a name="420"
+      > </a
+      ><a name="421" class="Symbol"
+      >=</a
+      ><a name="422"
+      > </a
+      ><a name="423" href="Stdlib.html#628" class="Datatype"
+      >&#8869;</a
+      ><a name="424"
+      >
+        </a
+      ><a name="433" href="Signature.Vector.html#370" class="Function"
+      >ArVec</a
+      ><a name="438"
+      > </a
+      ><a name="439" class="Symbol"
+      >(</a
+      ><a name="440" href="Stdlib.html#795" class="InductiveConstructor"
+      >suc</a
+      ><a name="443"
+      > </a
+      ><a name="444" href="Signature.Vector.html#444" class="Bound"
+      >n</a
+      ><a name="445" class="Symbol"
+      >)</a
+      ><a name="446"
+      > </a
+      ><a name="447" href="Signature.Vector.html#447" class="Bound"
+      >a</a
+      ><a name="448"
+      > </a
+      ><a name="449" class="Symbol"
+      >=</a
+      ><a name="450"
+      > </a
+      ><a name="451" href="Stdlib.html#718" class="Record"
+      >&#8868;</a
+      ><a name="452"
+      >
+
+        </a
+      ><a name="462" href="Signature.Vector.html#462" class="Function"
+      >TyVec</a
+      ><a name="467"
+      > </a
+      ><a name="468" class="Symbol"
+      >:</a
+      ><a name="469"
+      > </a
+      ><a name="470" class="Symbol"
+      >(</a
+      ><a name="471" href="Signature.Vector.html#471" class="Bound"
+      >n</a
+      ><a name="472"
+      > </a
+      ><a name="473" class="Symbol"
+      >:</a
+      ><a name="474"
+      > </a
+      ><a name="475" href="Stdlib.html#768" class="Datatype"
+      >&#8469;</a
+      ><a name="476" class="Symbol"
+      >)(</a
+      ><a name="478" href="Signature.Vector.html#478" class="Bound"
+      >op</a
+      ><a name="480"
+      > </a
+      ><a name="481" class="Symbol"
+      >:</a
+      ><a name="482"
+      > </a
+      ><a name="483" href="Signature.Vector.html#299" class="Function"
+      >OpVec</a
+      ><a name="488"
+      > </a
+      ><a name="489" href="Signature.Vector.html#471" class="Bound"
+      >n</a
+      ><a name="490" class="Symbol"
+      >)</a
+      ><a name="491"
+      > </a
+      ><a name="492" class="Symbol"
+      >&#8594;</a
+      ><a name="493"
+      > </a
+      ><a name="494" href="Signature.Vector.html#370" class="Function"
+      >ArVec</a
+      ><a name="499"
+      > </a
+      ><a name="500" href="Signature.Vector.html#471" class="Bound"
+      >n</a
+      ><a name="501"
+      > </a
+      ><a name="502" href="Signature.Vector.html#478" class="Bound"
+      >op</a
+      ><a name="504"
+      > </a
+      ><a name="505" class="Symbol"
+      >&#8594;</a
+      ><a name="506"
+      > </a
+      ><a name="507" href="Stdlib.html#768" class="Datatype"
+      >&#8469;</a
+      ><a name="508"
+      >
+        </a
+      ><a name="517" href="Signature.Vector.html#462" class="Function"
+      >TyVec</a
+      ><a name="522"
+      > </a
+      ><a name="523" href="Stdlib.html#784" class="InductiveConstructor"
+      >0</a
+      ><a name="524"
+      > </a
+      ><a name="525" href="Stdlib.html#746" class="InductiveConstructor"
+      >tt</a
+      ><a name="527"
+      > </a
+      ><a name="528" class="Symbol"
+      >()</a
+      ><a name="530"
+      >
+        </a
+      ><a name="539" href="Signature.Vector.html#462" class="Function"
+      >TyVec</a
+      ><a name="544"
+      > </a
+      ><a name="545" class="Symbol"
+      >(</a
+      ><a name="546" href="Stdlib.html#795" class="InductiveConstructor"
+      >suc</a
+      ><a name="549"
+      > </a
+      ><a name="550" href="Signature.Vector.html#550" class="Bound"
+      >n</a
+      ><a name="551" class="Symbol"
+      >)</a
+      ><a name="552"
+      > </a
+      ><a name="553" href="Signature.Vector.html#553" class="Bound"
+      >a</a
+      ><a name="554"
+      > </a
+      ><a name="555" href="Stdlib.html#746" class="InductiveConstructor"
+      >tt</a
+      ><a name="557"
+      > </a
+      ><a name="558" class="Symbol"
+      >=</a
+      ><a name="559"
+      > </a
+      ><a name="560" href="Signature.Vector.html#550" class="Bound"
+      >n</a
+      ><a name="561"
+      >
+
+</a
+      ><a name="563" href="Signature.Vector.html#563" class="Function"
+      >Vec</a
+      ><a name="566"
+      > </a
+      ><a name="567" class="Symbol"
+      >:</a
+      ><a name="568"
+      > </a
+      ><a name="569" class="PrimitiveType"
+      >Set</a
+      ><a name="572"
+      > </a
+      ><a name="573" class="Symbol"
+      >&#8594;</a
+      ><a name="574"
+      > </a
+      ><a name="575" href="Stdlib.html#768" class="Datatype"
+      >&#8469;</a
+      ><a name="576"
+      > </a
+      ><a name="577" class="Symbol"
+      >&#8594;</a
+      ><a name="578"
+      > </a
+      ><a name="579" class="PrimitiveType"
+      >Set</a
+      ><a name="582"
+      >
+</a
+      ><a name="583" href="Signature.Vector.html#563" class="Function"
+      >Vec</a
+      ><a name="586"
+      > </a
+      ><a name="587" href="Signature.Vector.html#587" class="Bound"
+      >A</a
+      ><a name="588"
+      > </a
+      ><a name="589" href="Signature.Vector.html#589" class="Bound"
+      >n</a
+      ><a name="590"
+      > </a
+      ><a name="591" class="Symbol"
+      >=</a
+      ><a name="592"
+      > </a
+      ><a name="593" href="Signature.html#520" class="Datatype"
+      >&#956;</a
+      ><a name="594"
+      > </a
+      ><a name="595" class="Symbol"
+      >(</a
+      ><a name="596" href="Signature.Vector.html#210" class="Function"
+      >&#931;Vec</a
+      ><a name="600"
+      > </a
+      ><a name="601" href="Signature.Vector.html#587" class="Bound"
+      >A</a
+      ><a name="602" class="Symbol"
+      >)</a
+      ><a name="603"
+      > </a
+      ><a name="604" href="Signature.Vector.html#589" class="Bound"
+      >n</a
+      ><a name="605"
+      >
+
+</a
+      ><a name="607" href="Signature.Vector.html#607" class="Function"
+      >vnil</a
+      ><a name="611"
+      > </a
+      ><a name="612" class="Symbol"
+      >:</a
+      ><a name="613"
+      > </a
+      ><a name="614" class="Symbol"
+      >&#8704;{</a
+      ><a name="616" href="Signature.Vector.html#616" class="Bound"
+      >A</a
+      ><a name="617" class="Symbol"
+      >}</a
+      ><a name="618"
+      > </a
+      ><a name="619" class="Symbol"
+      >&#8594;</a
+      ><a name="620"
+      > </a
+      ><a name="621" href="Signature.Vector.html#563" class="Function"
+      >Vec</a
+      ><a name="624"
+      > </a
+      ><a name="625" href="Signature.Vector.html#616" class="Bound"
+      >A</a
+      ><a name="626"
+      > </a
+      ><a name="627" class="Number"
+      >0</a
+      ><a name="628"
+      >
+</a
+      ><a name="629" href="Signature.Vector.html#607" class="Function"
+      >vnil</a
+      ><a name="633"
+      > </a
+      ><a name="634" class="Symbol"
+      >=</a
+      ><a name="635"
+      > </a
+      ><a name="636" href="Signature.html#558" class="InductiveConstructor Operator"
+      >&#10216;</a
+      ><a name="637"
+      > </a
+      ><a name="638" href="Stdlib.html#746" class="InductiveConstructor"
+      >tt</a
+      ><a name="640"
+      > </a
+      ><a name="641" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="642"
+      > </a
+      ><a name="643" class="Symbol"
+      >(&#955;</a
+      ><a name="645"
+      > </a
+      ><a name="646" href="Signature.Vector.html#646" class="Bound"
+      >bot</a
+      ><a name="649"
+      > </a
+      ><a name="650" class="Symbol"
+      >&#8594;</a
+      ><a name="651"
+      > </a
+      ><a name="652" href="Stdlib.html#643" class="Function"
+      >&#8869;-elim</a
+      ><a name="658"
+      > </a
+      ><a name="659" href="Signature.Vector.html#646" class="Bound"
+      >bot</a
+      ><a name="662" class="Symbol"
+      >)</a
+      ><a name="663"
+      > </a
+      ><a name="664" href="Signature.html#558" class="InductiveConstructor Operator"
+      >&#10217;</a
+      ><a name="665"
+      >
+
+</a
+      ><a name="667" href="Signature.Vector.html#667" class="Function"
+      >vcons</a
+      ><a name="672"
+      > </a
+      ><a name="673" class="Symbol"
+      >:</a
+      ><a name="674"
+      > </a
+      ><a name="675" class="Symbol"
+      >&#8704;{</a
+      ><a name="677" href="Signature.Vector.html#677" class="Bound"
+      >A</a
+      ><a name="678"
+      > </a
+      ><a name="679" href="Signature.Vector.html#679" class="Bound"
+      >n</a
+      ><a name="680" class="Symbol"
+      >}</a
+      ><a name="681"
+      > </a
+      ><a name="682" class="Symbol"
+      >&#8594;</a
+      ><a name="683"
+      > </a
+      ><a name="684" href="Signature.Vector.html#677" class="Bound"
+      >A</a
+      ><a name="685"
+      > </a
+      ><a name="686" class="Symbol"
+      >&#8594;</a
+      ><a name="687"
+      > </a
+      ><a name="688" href="Signature.Vector.html#563" class="Function"
+      >Vec</a
+      ><a name="691"
+      > </a
+      ><a name="692" href="Signature.Vector.html#677" class="Bound"
+      >A</a
+      ><a name="693"
+      > </a
+      ><a name="694" href="Signature.Vector.html#679" class="Bound"
+      >n</a
+      ><a name="695"
+      > </a
+      ><a name="696" class="Symbol"
+      >&#8594;</a
+      ><a name="697"
+      > </a
+      ><a name="698" href="Signature.Vector.html#563" class="Function"
+      >Vec</a
+      ><a name="701"
+      > </a
+      ><a name="702" href="Signature.Vector.html#677" class="Bound"
+      >A</a
+      ><a name="703"
+      > </a
+      ><a name="704" class="Symbol"
+      >(</a
+      ><a name="705" href="Stdlib.html#795" class="InductiveConstructor"
+      >suc</a
+      ><a name="708"
+      > </a
+      ><a name="709" href="Signature.Vector.html#679" class="Bound"
+      >n</a
+      ><a name="710" class="Symbol"
+      >)</a
+      ><a name="711"
+      >
+</a
+      ><a name="712" href="Signature.Vector.html#667" class="Function"
+      >vcons</a
+      ><a name="717"
+      > </a
+      ><a name="718" href="Signature.Vector.html#718" class="Bound"
+      >a</a
+      ><a name="719"
+      > </a
+      ><a name="720" href="Signature.Vector.html#720" class="Bound"
+      >xs</a
+      ><a name="722"
+      > </a
+      ><a name="723" class="Symbol"
+      >=</a
+      ><a name="724"
+      > </a
+      ><a name="725" href="Signature.html#558" class="InductiveConstructor Operator"
+      >&#10216;</a
+      ><a name="726"
+      > </a
+      ><a name="727" href="Signature.Vector.html#718" class="Bound"
+      >a</a
+      ><a name="728"
+      > </a
+      ><a name="729" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="730"
+      > </a
+      ><a name="731" class="Symbol"
+      >(&#955;</a
+      ><a name="733"
+      > </a
+      ><a name="734" class="Symbol"
+      >{</a
+      ><a name="735"
+      > </a
+      ><a name="736" href="Stdlib.html#746" class="InductiveConstructor"
+      >tt</a
+      ><a name="738"
+      > </a
+      ><a name="739" class="Symbol"
+      >&#8594;</a
+      ><a name="740"
+      > </a
+      ><a name="741" href="Signature.Vector.html#720" class="Bound"
+      >xs</a
+      ><a name="743"
+      > </a
+      ><a name="744" class="Symbol"
+      >})</a
+      ><a name="746"
+      > </a
+      ><a name="747" href="Signature.html#558" class="InductiveConstructor Operator"
+      >&#10217;</a
+      ><a name="748"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

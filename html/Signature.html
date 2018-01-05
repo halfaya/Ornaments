@@ -1,0 +1,852 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Signature</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Keyword"
+      >module</a
+      ><a name="7"
+      > </a
+      ><a name="8" href="Signature.html#1" class="Module"
+      >Signature</a
+      ><a name="17"
+      > </a
+      ><a name="18" class="Keyword"
+      >where</a
+      ><a name="23"
+      >
+
+</a
+      ><a name="25" class="Keyword"
+      >open</a
+      ><a name="29"
+      > </a
+      ><a name="30" class="Keyword"
+      >import</a
+      ><a name="36"
+      > </a
+      ><a name="37" class="Module"
+      >Stdlib</a
+      ><a name="43"
+      > </a
+      ><a name="44" class="Keyword"
+      >hiding</a
+      ><a name="50"
+      > </a
+      ><a name="51" class="Symbol"
+      >(</a
+      ><a name="52"
+      >_&#8728;_</a
+      ><a name="55" class="Symbol"
+      >)</a
+      ><a name="56"
+      >
+
+</a
+      ><a name="58" class="Comment"
+      >-- Many-sorted signatures are also implemented in the Glorious</a
+      ><a name="120"
+      >
+</a
+      ><a name="121" class="Comment"
+      >-- Standard library under the heading of</a
+      ><a name="161"
+      >
+</a
+      ><a name="162" class="Comment"
+      >-- 'Data.Container.Indexed'. This file gives a simplified version of</a
+      ><a name="230"
+      >
+</a
+      ><a name="231" class="Comment"
+      >-- those definitions.</a
+      ><a name="252"
+      >
+
+</a
+      ><a name="254" class="Keyword"
+      >record</a
+      ><a name="260"
+      > </a
+      ><a name="261" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="264"
+      > </a
+      ><a name="265" class="Symbol"
+      >(</a
+      ><a name="266" href="Signature.html#266" class="Bound"
+      >I</a
+      ><a name="267"
+      > </a
+      ><a name="268" class="Symbol"
+      >:</a
+      ><a name="269"
+      > </a
+      ><a name="270" class="PrimitiveType"
+      >Set</a
+      ><a name="273" class="Symbol"
+      >)</a
+      ><a name="274"
+      > </a
+      ><a name="275" class="Symbol"
+      >:</a
+      ><a name="276"
+      > </a
+      ><a name="277" class="PrimitiveType"
+      >Set&#8321;</a
+      ><a name="281"
+      > </a
+      ><a name="282" class="Keyword"
+      >where</a
+      ><a name="287"
+      >
+  </a
+      ><a name="290" class="Keyword"
+      >constructor</a
+      ><a name="301"
+      > </a
+      ><a name="302" href="Signature.html#302" class="InductiveConstructor Operator"
+      >_&#9667;_/_</a
+      ><a name="307"
+      >
+  </a
+      ><a name="310" class="Keyword"
+      >field</a
+      ><a name="315"
+      >
+    </a
+      ><a name="320" href="Signature.html#320" class="Field"
+      >Op</a
+      ><a name="322"
+      > </a
+      ><a name="323" class="Symbol"
+      >:</a
+      ><a name="324"
+      > </a
+      ><a name="325" class="Symbol"
+      >(</a
+      ><a name="326" href="Signature.html#326" class="Bound"
+      >i</a
+      ><a name="327"
+      > </a
+      ><a name="328" class="Symbol"
+      >:</a
+      ><a name="329"
+      > </a
+      ><a name="330" href="Signature.html#266" class="Bound"
+      >I</a
+      ><a name="331" class="Symbol"
+      >)</a
+      ><a name="332"
+      > </a
+      ><a name="333" class="Symbol"
+      >&#8594;</a
+      ><a name="334"
+      > </a
+      ><a name="335" class="PrimitiveType"
+      >Set</a
+      ><a name="338"
+      >
+    </a
+      ><a name="343" href="Signature.html#343" class="Field"
+      >Ar</a
+      ><a name="345"
+      > </a
+      ><a name="346" class="Symbol"
+      >:</a
+      ><a name="347"
+      > </a
+      ><a name="348" class="Symbol"
+      >&#8704;</a
+      ><a name="349"
+      > </a
+      ><a name="350" class="Symbol"
+      >{</a
+      ><a name="351" href="Signature.html#351" class="Bound"
+      >i</a
+      ><a name="352" class="Symbol"
+      >}</a
+      ><a name="353"
+      > </a
+      ><a name="354" class="Symbol"
+      >&#8594;</a
+      ><a name="355"
+      > </a
+      ><a name="356" href="Signature.html#320" class="Bound"
+      >Op</a
+      ><a name="358"
+      > </a
+      ><a name="359" href="Signature.html#351" class="Bound"
+      >i</a
+      ><a name="360"
+      > </a
+      ><a name="361" class="Symbol"
+      >&#8594;</a
+      ><a name="362"
+      > </a
+      ><a name="363" class="PrimitiveType"
+      >Set</a
+      ><a name="366"
+      >
+    </a
+      ><a name="371" href="Signature.html#371" class="Field"
+      >Ty</a
+      ><a name="373"
+      > </a
+      ><a name="374" class="Symbol"
+      >:</a
+      ><a name="375"
+      > </a
+      ><a name="376" class="Symbol"
+      >&#8704;</a
+      ><a name="377"
+      > </a
+      ><a name="378" class="Symbol"
+      >{</a
+      ><a name="379" href="Signature.html#379" class="Bound"
+      >i</a
+      ><a name="380" class="Symbol"
+      >}{</a
+      ><a name="382" href="Signature.html#382" class="Bound"
+      >op</a
+      ><a name="384"
+      > </a
+      ><a name="385" class="Symbol"
+      >:</a
+      ><a name="386"
+      > </a
+      ><a name="387" href="Signature.html#320" class="Bound"
+      >Op</a
+      ><a name="389"
+      > </a
+      ><a name="390" href="Signature.html#379" class="Bound"
+      >i</a
+      ><a name="391" class="Symbol"
+      >}</a
+      ><a name="392"
+      > </a
+      ><a name="393" class="Symbol"
+      >&#8594;</a
+      ><a name="394"
+      > </a
+      ><a name="395" href="Signature.html#343" class="Bound"
+      >Ar</a
+      ><a name="397"
+      > </a
+      ><a name="398" href="Signature.html#382" class="Bound"
+      >op</a
+      ><a name="400"
+      > </a
+      ><a name="401" class="Symbol"
+      >&#8594;</a
+      ><a name="402"
+      > </a
+      ><a name="403" href="Signature.html#266" class="Bound"
+      >I</a
+      ><a name="404"
+      >
+
+
+</a
+      ><a name="407" href="Signature.html#407" class="Function Operator"
+      >&#10214;_&#10215;</a
+      ><a name="410"
+      > </a
+      ><a name="411" class="Symbol"
+      >:</a
+      ><a name="412"
+      > </a
+      ><a name="413" class="Symbol"
+      >&#8704;{</a
+      ><a name="415" href="Signature.html#415" class="Bound"
+      >I</a
+      ><a name="416" class="Symbol"
+      >}</a
+      ><a name="417"
+      > </a
+      ><a name="418" class="Symbol"
+      >&#8594;</a
+      ><a name="419"
+      > </a
+      ><a name="420" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="423"
+      > </a
+      ><a name="424" href="Signature.html#415" class="Bound"
+      >I</a
+      ><a name="425"
+      > </a
+      ><a name="426" class="Symbol"
+      >&#8594;</a
+      ><a name="427"
+      > </a
+      ><a name="428" class="Symbol"
+      >(</a
+      ><a name="429" href="Signature.html#415" class="Bound"
+      >I</a
+      ><a name="430"
+      > </a
+      ><a name="431" class="Symbol"
+      >&#8594;</a
+      ><a name="432"
+      > </a
+      ><a name="433" class="PrimitiveType"
+      >Set</a
+      ><a name="436" class="Symbol"
+      >)</a
+      ><a name="437"
+      > </a
+      ><a name="438" class="Symbol"
+      >&#8594;</a
+      ><a name="439"
+      > </a
+      ><a name="440" href="Signature.html#415" class="Bound"
+      >I</a
+      ><a name="441"
+      > </a
+      ><a name="442" class="Symbol"
+      >&#8594;</a
+      ><a name="443"
+      > </a
+      ><a name="444" class="PrimitiveType"
+      >Set</a
+      ><a name="447"
+      >
+</a
+      ><a name="448" href="Signature.html#407" class="Function Operator"
+      >&#10214;</a
+      ><a name="449"
+      > </a
+      ><a name="450" href="Signature.html#450" class="Bound"
+      >Op</a
+      ><a name="452"
+      > </a
+      ><a name="453" href="Signature.html#302" class="InductiveConstructor Operator"
+      >&#9667;</a
+      ><a name="454"
+      > </a
+      ><a name="455" href="Signature.html#455" class="Bound"
+      >Ar</a
+      ><a name="457"
+      > </a
+      ><a name="458" href="Signature.html#302" class="InductiveConstructor Operator"
+      >/</a
+      ><a name="459"
+      > </a
+      ><a name="460" href="Signature.html#460" class="Bound"
+      >Ty</a
+      ><a name="462"
+      > </a
+      ><a name="463" href="Signature.html#407" class="Function Operator"
+      >&#10215;</a
+      ><a name="464"
+      > </a
+      ><a name="465" href="Signature.html#465" class="Bound"
+      >X</a
+      ><a name="466"
+      > </a
+      ><a name="467" href="Signature.html#467" class="Bound"
+      >i</a
+      ><a name="468"
+      > </a
+      ><a name="469" class="Symbol"
+      >=</a
+      ><a name="470"
+      > </a
+      ><a name="471" href="Stdlib.html#467" class="Function"
+      >&#931;[</a
+      ><a name="473"
+      > </a
+      ><a name="474" href="Signature.html#474" class="Bound"
+      >op</a
+      ><a name="476"
+      > </a
+      ><a name="477" href="Stdlib.html#467" class="Function"
+      >&#8712;</a
+      ><a name="478"
+      > </a
+      ><a name="479" href="Signature.html#450" class="Bound"
+      >Op</a
+      ><a name="481"
+      > </a
+      ><a name="482" href="Signature.html#467" class="Bound"
+      >i</a
+      ><a name="483"
+      > </a
+      ><a name="484" href="Stdlib.html#467" class="Function"
+      >]</a
+      ><a name="485"
+      > </a
+      ><a name="486" class="Symbol"
+      >((</a
+      ><a name="488" href="Signature.html#488" class="Bound"
+      >ar</a
+      ><a name="490"
+      > </a
+      ><a name="491" class="Symbol"
+      >:</a
+      ><a name="492"
+      > </a
+      ><a name="493" href="Signature.html#455" class="Bound"
+      >Ar</a
+      ><a name="495"
+      > </a
+      ><a name="496" href="Signature.html#474" class="Bound"
+      >op</a
+      ><a name="498" class="Symbol"
+      >)</a
+      ><a name="499"
+      > </a
+      ><a name="500" class="Symbol"
+      >&#8594;</a
+      ><a name="501"
+      > </a
+      ><a name="502" href="Signature.html#465" class="Bound"
+      >X</a
+      ><a name="503"
+      > </a
+      ><a name="504" class="Symbol"
+      >(</a
+      ><a name="505" href="Signature.html#460" class="Bound"
+      >Ty</a
+      ><a name="507"
+      > </a
+      ><a name="508" href="Signature.html#488" class="Bound"
+      >ar</a
+      ><a name="510" class="Symbol"
+      >))</a
+      ><a name="512"
+      >
+
+
+</a
+      ><a name="515" class="Keyword"
+      >data</a
+      ><a name="519"
+      > </a
+      ><a name="520" href="Signature.html#520" class="Datatype"
+      >&#956;</a
+      ><a name="521"
+      > </a
+      ><a name="522" class="Symbol"
+      >{</a
+      ><a name="523" href="Signature.html#523" class="Bound"
+      >I</a
+      ><a name="524" class="Symbol"
+      >}(</a
+      ><a name="526" href="Signature.html#526" class="Bound"
+      >&#931;</a
+      ><a name="527"
+      > </a
+      ><a name="528" class="Symbol"
+      >:</a
+      ><a name="529"
+      > </a
+      ><a name="530" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="533"
+      > </a
+      ><a name="534" href="Signature.html#523" class="Bound"
+      >I</a
+      ><a name="535" class="Symbol"
+      >)(</a
+      ><a name="537" href="Signature.html#537" class="Bound"
+      >i</a
+      ><a name="538"
+      > </a
+      ><a name="539" class="Symbol"
+      >:</a
+      ><a name="540"
+      > </a
+      ><a name="541" href="Signature.html#523" class="Bound"
+      >I</a
+      ><a name="542" class="Symbol"
+      >)</a
+      ><a name="543"
+      > </a
+      ><a name="544" class="Symbol"
+      >:</a
+      ><a name="545"
+      > </a
+      ><a name="546" class="PrimitiveType"
+      >Set</a
+      ><a name="549"
+      > </a
+      ><a name="550" class="Keyword"
+      >where</a
+      ><a name="555"
+      >
+  </a
+      ><a name="558" href="Signature.html#558" class="InductiveConstructor Operator"
+      >&#10216;_&#10217;</a
+      ><a name="561"
+      > </a
+      ><a name="562" class="Symbol"
+      >:</a
+      ><a name="563"
+      > </a
+      ><a name="564" href="Signature.html#407" class="Function Operator"
+      >&#10214;</a
+      ><a name="565"
+      > </a
+      ><a name="566" href="Signature.html#526" class="Bound"
+      >&#931;</a
+      ><a name="567"
+      > </a
+      ><a name="568" href="Signature.html#407" class="Function Operator"
+      >&#10215;</a
+      ><a name="569"
+      > </a
+      ><a name="570" class="Symbol"
+      >(</a
+      ><a name="571" href="Signature.html#520" class="Datatype"
+      >&#956;</a
+      ><a name="572"
+      > </a
+      ><a name="573" href="Signature.html#526" class="Bound"
+      >&#931;</a
+      ><a name="574" class="Symbol"
+      >)</a
+      ><a name="575"
+      > </a
+      ><a name="576" href="Signature.html#537" class="Bound"
+      >i</a
+      ><a name="577"
+      > </a
+      ><a name="578" class="Symbol"
+      >&#8594;</a
+      ><a name="579"
+      > </a
+      ><a name="580" href="Signature.html#520" class="Datatype"
+      >&#956;</a
+      ><a name="581"
+      > </a
+      ><a name="582" href="Signature.html#526" class="Bound"
+      >&#931;</a
+      ><a name="583"
+      > </a
+      ><a name="584" href="Signature.html#537" class="Bound"
+      >i</a
+      ><a name="585"
+      >
+
+</a
+      ><a name="587" href="Signature.html#587" class="Function Operator"
+      >_&#8728;_</a
+      ><a name="590"
+      > </a
+      ><a name="591" class="Symbol"
+      >:</a
+      ><a name="592"
+      > </a
+      ><a name="593" class="Symbol"
+      >&#8704;{</a
+      ><a name="595" href="Signature.html#595" class="Bound"
+      >I</a
+      ><a name="596" class="Symbol"
+      >}</a
+      ><a name="597"
+      > </a
+      ><a name="598" class="Symbol"
+      >&#8594;</a
+      ><a name="599"
+      > </a
+      ><a name="600" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="603"
+      > </a
+      ><a name="604" href="Signature.html#595" class="Bound"
+      >I</a
+      ><a name="605"
+      > </a
+      ><a name="606" class="Symbol"
+      >&#8594;</a
+      ><a name="607"
+      > </a
+      ><a name="608" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="611"
+      > </a
+      ><a name="612" href="Signature.html#595" class="Bound"
+      >I</a
+      ><a name="613"
+      > </a
+      ><a name="614" class="Symbol"
+      >&#8594;</a
+      ><a name="615"
+      > </a
+      ><a name="616" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="619"
+      > </a
+      ><a name="620" href="Signature.html#595" class="Bound"
+      >I</a
+      ><a name="621"
+      >
+</a
+      ><a name="622" href="Signature.html#622" class="Bound"
+      >&#931;&#8322;</a
+      ><a name="624"
+      > </a
+      ><a name="625" href="Signature.html#587" class="Function Operator"
+      >&#8728;</a
+      ><a name="626"
+      > </a
+      ><a name="627" href="Signature.html#627" class="Bound"
+      >&#931;&#8321;</a
+      ><a name="629"
+      > </a
+      ><a name="630" class="Symbol"
+      >=</a
+      ><a name="631"
+      > </a
+      ><a name="632" class="Symbol"
+      >(&#955;</a
+      ><a name="634"
+      > </a
+      ><a name="635" href="Signature.html#635" class="Bound"
+      >i</a
+      ><a name="636"
+      > </a
+      ><a name="637" class="Symbol"
+      >&#8594;</a
+      ><a name="638"
+      > </a
+      ><a name="639" href="Stdlib.html#467" class="Function"
+      >&#931;[</a
+      ><a name="641"
+      > </a
+      ><a name="642" href="Signature.html#642" class="Bound"
+      >op&#8321;</a
+      ><a name="645"
+      > </a
+      ><a name="646" href="Stdlib.html#467" class="Function"
+      >&#8712;</a
+      ><a name="647"
+      > </a
+      ><a name="648" href="Signature.html#320" class="Field"
+      >Op</a
+      ><a name="650"
+      > </a
+      ><a name="651" href="Signature.html#627" class="Bound"
+      >&#931;&#8321;</a
+      ><a name="653"
+      > </a
+      ><a name="654" href="Signature.html#635" class="Bound"
+      >i</a
+      ><a name="655"
+      > </a
+      ><a name="656" href="Stdlib.html#467" class="Function"
+      >]</a
+      ><a name="657"
+      > </a
+      ><a name="658" class="Symbol"
+      >((</a
+      ><a name="660" href="Signature.html#660" class="Bound"
+      >ar&#8321;</a
+      ><a name="663"
+      > </a
+      ><a name="664" class="Symbol"
+      >:</a
+      ><a name="665"
+      > </a
+      ><a name="666" href="Signature.html#343" class="Field"
+      >Ar</a
+      ><a name="668"
+      > </a
+      ><a name="669" href="Signature.html#627" class="Bound"
+      >&#931;&#8321;</a
+      ><a name="671"
+      > </a
+      ><a name="672" href="Signature.html#642" class="Bound"
+      >op&#8321;</a
+      ><a name="675" class="Symbol"
+      >)</a
+      ><a name="676"
+      > </a
+      ><a name="677" class="Symbol"
+      >&#8594;</a
+      ><a name="678"
+      > </a
+      ><a name="679" href="Signature.html#320" class="Field"
+      >Op</a
+      ><a name="681"
+      > </a
+      ><a name="682" href="Signature.html#622" class="Bound"
+      >&#931;&#8322;</a
+      ><a name="684"
+      > </a
+      ><a name="685" class="Symbol"
+      >(</a
+      ><a name="686" href="Signature.html#371" class="Field"
+      >Ty</a
+      ><a name="688"
+      > </a
+      ><a name="689" href="Signature.html#627" class="Bound"
+      >&#931;&#8321;</a
+      ><a name="691"
+      > </a
+      ><a name="692" href="Signature.html#660" class="Bound"
+      >ar&#8321;</a
+      ><a name="695" class="Symbol"
+      >)))</a
+      ><a name="698"
+      > 
+        </a
+      ><a name="708" href="Signature.html#302" class="InductiveConstructor Operator"
+      >&#9667;</a
+      ><a name="709"
+      > </a
+      ><a name="710" class="Symbol"
+      >(&#955;</a
+      ><a name="712"
+      > </a
+      ><a name="713" class="Symbol"
+      >{</a
+      ><a name="714"
+      > </a
+      ><a name="715" class="Symbol"
+      >(</a
+      ><a name="716" href="Signature.html#716" class="Bound"
+      >op&#8321;</a
+      ><a name="719"
+      > </a
+      ><a name="720" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="721"
+      > </a
+      ><a name="722" href="Signature.html#722" class="Bound"
+      >ops&#8322;</a
+      ><a name="726" class="Symbol"
+      >)</a
+      ><a name="727"
+      > </a
+      ><a name="728" class="Symbol"
+      >&#8594;</a
+      ><a name="729"
+      > </a
+      ><a name="730" href="Stdlib.html#467" class="Function"
+      >&#931;[</a
+      ><a name="732"
+      > </a
+      ><a name="733" href="Signature.html#733" class="Bound"
+      >ar&#8321;</a
+      ><a name="736"
+      > </a
+      ><a name="737" href="Stdlib.html#467" class="Function"
+      >&#8712;</a
+      ><a name="738"
+      > </a
+      ><a name="739" href="Signature.html#343" class="Field"
+      >Ar</a
+      ><a name="741"
+      > </a
+      ><a name="742" href="Signature.html#627" class="Bound"
+      >&#931;&#8321;</a
+      ><a name="744"
+      > </a
+      ><a name="745" href="Signature.html#716" class="Bound"
+      >op&#8321;</a
+      ><a name="748"
+      > </a
+      ><a name="749" href="Stdlib.html#467" class="Function"
+      >]</a
+      ><a name="750"
+      > </a
+      ><a name="751" href="Signature.html#343" class="Field"
+      >Ar</a
+      ><a name="753"
+      > </a
+      ><a name="754" href="Signature.html#622" class="Bound"
+      >&#931;&#8322;</a
+      ><a name="756"
+      > </a
+      ><a name="757" class="Symbol"
+      >(</a
+      ><a name="758" href="Signature.html#722" class="Bound"
+      >ops&#8322;</a
+      ><a name="762"
+      > </a
+      ><a name="763" href="Signature.html#733" class="Bound"
+      >ar&#8321;</a
+      ><a name="766" class="Symbol"
+      >)</a
+      ><a name="767"
+      > </a
+      ><a name="768" class="Symbol"
+      >})</a
+      ><a name="770"
+      > 
+        </a
+      ><a name="780" href="Signature.html#302" class="InductiveConstructor Operator"
+      >/</a
+      ><a name="781"
+      > </a
+      ><a name="782" class="Symbol"
+      >(&#955;</a
+      ><a name="784"
+      > </a
+      ><a name="785" class="Symbol"
+      >{</a
+      ><a name="786"
+      > </a
+      ><a name="787" class="Symbol"
+      >(</a
+      ><a name="788" href="Signature.html#788" class="Bound"
+      >ar&#8321;</a
+      ><a name="791"
+      > </a
+      ><a name="792" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="793"
+      > </a
+      ><a name="794" href="Signature.html#794" class="Bound"
+      >ar&#8322;</a
+      ><a name="797" class="Symbol"
+      >)</a
+      ><a name="798"
+      > </a
+      ><a name="799" class="Symbol"
+      >&#8594;</a
+      ><a name="800"
+      > </a
+      ><a name="801" href="Signature.html#371" class="Field"
+      >Ty</a
+      ><a name="803"
+      > </a
+      ><a name="804" href="Signature.html#622" class="Bound"
+      >&#931;&#8322;</a
+      ><a name="806"
+      > </a
+      ><a name="807" href="Signature.html#794" class="Bound"
+      >ar&#8322;</a
+      ><a name="810"
+      > </a
+      ><a name="811" class="Symbol"
+      >})</a
+      ><a name="813"
+      >
+  </a
+      ><a name="816" class="Keyword"
+      >where</a
+      ><a name="821"
+      > </a
+      ><a name="822" class="Keyword"
+      >open</a
+      ><a name="826"
+      > </a
+      ><a name="827" href="Signature.html#261" class="Module"
+      >Sig</a
+      ><a name="830"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

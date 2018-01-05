@@ -1,0 +1,1717 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Structure.Composition</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Keyword"
+      >module</a
+      ><a name="7"
+      > </a
+      ><a name="8" href="Structure.Composition.html#1" class="Module"
+      >Structure.Composition</a
+      ><a name="29"
+      > </a
+      ><a name="30" class="Keyword"
+      >where</a
+      ><a name="35"
+      >
+
+</a
+      ><a name="37" class="Keyword"
+      >open</a
+      ><a name="41"
+      > </a
+      ><a name="42" class="Keyword"
+      >import</a
+      ><a name="48"
+      > </a
+      ><a name="49" class="Module"
+      >Stdlib</a
+      ><a name="55"
+      >
+</a
+      ><a name="56" class="Keyword"
+      >open</a
+      ><a name="60"
+      > </a
+      ><a name="61" class="Keyword"
+      >import</a
+      ><a name="67"
+      > </a
+      ><a name="68" href="Signature.html#1" class="Module"
+      >Signature</a
+      ><a name="77"
+      > </a
+      ><a name="78" class="Keyword"
+      >renaming</a
+      ><a name="86"
+      > </a
+      ><a name="87" class="Symbol"
+      >(</a
+      ><a name="88"
+      >_&#8728;_ </a
+      ><a name="92" class="Symbol"
+      >to</a
+      ><a name="94"
+      > _&#8728;C_</a
+      ><a name="99" class="Symbol"
+      >)</a
+      ><a name="100"
+      >
+</a
+      ><a name="101" class="Keyword"
+      >open</a
+      ><a name="105"
+      > </a
+      ><a name="106" class="Keyword"
+      >import</a
+      ><a name="112"
+      > </a
+      ><a name="113" href="Ornament.html#1" class="Module"
+      >Ornament</a
+      ><a name="121"
+      >
+
+</a
+      ><a name="123" class="Keyword"
+      >module</a
+      ><a name="129"
+      > </a
+      ><a name="130" href="Structure.Composition.html#130" class="Module"
+      >Vertical</a
+      ><a name="138"
+      > 
+       </a
+      ><a name="147" class="Symbol"
+      >{</a
+      ><a name="148" href="Structure.Composition.html#148" class="Bound"
+      >I&#8314;&#8314;</a
+      ><a name="151"
+      > </a
+      ><a name="152" href="Structure.Composition.html#152" class="Bound"
+      >I&#8314;</a
+      ><a name="154"
+      > </a
+      ><a name="155" href="Structure.Composition.html#155" class="Bound"
+      >I</a
+      ><a name="156" class="Symbol"
+      >}{</a
+      ><a name="158" href="Structure.Composition.html#158" class="Bound"
+      >&#931;</a
+      ><a name="159"
+      > </a
+      ><a name="160" class="Symbol"
+      >:</a
+      ><a name="161"
+      > </a
+      ><a name="162" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="165"
+      > </a
+      ><a name="166" href="Structure.Composition.html#155" class="Bound"
+      >I</a
+      ><a name="167" class="Symbol"
+      >}{</a
+      ><a name="169" href="Structure.Composition.html#169" class="Bound"
+      >v</a
+      ><a name="170"
+      > </a
+      ><a name="171" class="Symbol"
+      >:</a
+      ><a name="172"
+      > </a
+      ><a name="173" href="Structure.Composition.html#152" class="Bound"
+      >I&#8314;</a
+      ><a name="175"
+      > </a
+      ><a name="176" class="Symbol"
+      >&#8594;</a
+      ><a name="177"
+      > </a
+      ><a name="178" href="Structure.Composition.html#155" class="Bound"
+      >I</a
+      ><a name="179" class="Symbol"
+      >}{</a
+      ><a name="181" href="Structure.Composition.html#181" class="Bound"
+      >v&#8314;</a
+      ><a name="183"
+      > </a
+      ><a name="184" class="Symbol"
+      >:</a
+      ><a name="185"
+      > </a
+      ><a name="186" href="Structure.Composition.html#148" class="Bound"
+      >I&#8314;&#8314;</a
+      ><a name="189"
+      > </a
+      ><a name="190" class="Symbol"
+      >&#8594;</a
+      ><a name="191"
+      > </a
+      ><a name="192" href="Structure.Composition.html#152" class="Bound"
+      >I&#8314;</a
+      ><a name="194" class="Symbol"
+      >}</a
+      ><a name="195"
+      >
+       </a
+      ><a name="203" class="Symbol"
+      >(</a
+      ><a name="204" href="Structure.Composition.html#204" class="Bound"
+      >&#964;</a
+      ><a name="205"
+      > </a
+      ><a name="206" class="Symbol"
+      >:</a
+      ><a name="207"
+      > </a
+      ><a name="208" href="Ornament.html#73" class="Record"
+      >COrn</a
+      ><a name="212"
+      > </a
+      ><a name="213" href="Structure.Composition.html#158" class="Bound"
+      >&#931;</a
+      ><a name="214"
+      > </a
+      ><a name="215" href="Structure.Composition.html#152" class="Bound"
+      >I&#8314;</a
+      ><a name="217"
+      > </a
+      ><a name="218" href="Structure.Composition.html#169" class="Bound"
+      >v</a
+      ><a name="219" class="Symbol"
+      >)(</a
+      ><a name="221" href="Structure.Composition.html#221" class="Bound"
+      >&#964;&#8314;</a
+      ><a name="223"
+      > </a
+      ><a name="224" class="Symbol"
+      >:</a
+      ><a name="225"
+      > </a
+      ><a name="226" href="Ornament.html#73" class="Record"
+      >COrn</a
+      ><a name="230"
+      > </a
+      ><a name="231" href="Ornament.html#385" class="Function Operator"
+      >&#10214;</a
+      ><a name="232"
+      > </a
+      ><a name="233" href="Structure.Composition.html#204" class="Bound"
+      >&#964;</a
+      ><a name="234"
+      > </a
+      ><a name="235" href="Ornament.html#385" class="Function Operator"
+      >&#10215;COrn</a
+      ><a name="240"
+      > </a
+      ><a name="241" href="Structure.Composition.html#148" class="Bound"
+      >I&#8314;&#8314;</a
+      ><a name="244"
+      > </a
+      ><a name="245" href="Structure.Composition.html#181" class="Bound"
+      >v&#8314;</a
+      ><a name="247" class="Symbol"
+      >)</a
+      ><a name="248"
+      > 
+  </a
+      ><a name="252" class="Keyword"
+      >where</a
+      ><a name="257"
+      >
+
+  </a
+      ><a name="261" href="Structure.Composition.html#261" class="Function Operator"
+      >_&#8729;_</a
+      ><a name="264"
+      > </a
+      ><a name="265" class="Symbol"
+      >:</a
+      ><a name="266"
+      > </a
+      ><a name="267" href="Ornament.html#73" class="Record"
+      >COrn</a
+      ><a name="271"
+      > </a
+      ><a name="272" href="Structure.Composition.html#158" class="Bound"
+      >&#931;</a
+      ><a name="273"
+      > </a
+      ><a name="274" href="Structure.Composition.html#148" class="Bound"
+      >I&#8314;&#8314;</a
+      ><a name="277"
+      > </a
+      ><a name="278" class="Symbol"
+      >(</a
+      ><a name="279" href="Structure.Composition.html#169" class="Bound"
+      >v</a
+      ><a name="280"
+      > </a
+      ><a name="281" href="Stdlib.html#1928" class="Function Operator"
+      >&#8728;</a
+      ><a name="282"
+      > </a
+      ><a name="283" href="Structure.Composition.html#181" class="Bound"
+      >v&#8314;</a
+      ><a name="285" class="Symbol"
+      >)</a
+      ><a name="286"
+      >
+  </a
+      ><a name="289" href="Structure.Composition.html#261" class="Function Operator"
+      >_&#8729;_</a
+      ><a name="292"
+      > </a
+      ><a name="293" class="Symbol"
+      >=</a
+      ><a name="294"
+      > </a
+      ><a name="295" class="Keyword"
+      >record</a
+      ><a name="301"
+      > </a
+      ><a name="302" class="Symbol"
+      >{</a
+      ><a name="303"
+      > </a
+      ><a name="304" class="Field"
+      >extend</a
+      ><a name="310"
+      > </a
+      ><a name="311" class="Symbol"
+      >=</a
+      ><a name="312"
+      > </a
+      ><a name="313" class="Symbol"
+      >&#955;</a
+      ><a name="314"
+      > </a
+      ><a name="315" href="Structure.Composition.html#315" class="Bound"
+      >i&#8314;&#8314;</a
+      ><a name="318"
+      > </a
+      ><a name="319" href="Structure.Composition.html#319" class="Bound"
+      >op</a
+      ><a name="321"
+      > </a
+      ><a name="322" class="Symbol"
+      >&#8594;</a
+      ><a name="323"
+      > </a
+      ><a name="324" href="Stdlib.html#467" class="Function"
+      >&#931;[</a
+      ><a name="326"
+      > </a
+      ><a name="327" href="Structure.Composition.html#327" class="Bound"
+      >ext</a
+      ><a name="330"
+      > </a
+      ><a name="331" href="Stdlib.html#467" class="Function"
+      >&#8712;</a
+      ><a name="332"
+      > </a
+      ><a name="333" href="Ornament.html#153" class="Field"
+      >extend</a
+      ><a name="339"
+      > </a
+      ><a name="340" href="Structure.Composition.html#204" class="Bound"
+      >&#964;</a
+      ><a name="341"
+      > </a
+      ><a name="342" class="Symbol"
+      >(</a
+      ><a name="343" href="Structure.Composition.html#181" class="Bound"
+      >v&#8314;</a
+      ><a name="345"
+      > </a
+      ><a name="346" href="Structure.Composition.html#315" class="Bound"
+      >i&#8314;&#8314;</a
+      ><a name="349" class="Symbol"
+      >)</a
+      ><a name="350"
+      > </a
+      ><a name="351" href="Structure.Composition.html#319" class="Bound"
+      >op</a
+      ><a name="353"
+      > </a
+      ><a name="354" href="Stdlib.html#467" class="Function"
+      >]</a
+      ><a name="355"
+      > </a
+      ><a name="356" href="Ornament.html#153" class="Field"
+      >extend</a
+      ><a name="362"
+      > </a
+      ><a name="363" href="Structure.Composition.html#221" class="Bound"
+      >&#964;&#8314;</a
+      ><a name="365"
+      > </a
+      ><a name="366" href="Structure.Composition.html#315" class="Bound"
+      >i&#8314;&#8314;</a
+      ><a name="369"
+      > </a
+      ><a name="370" class="Symbol"
+      >(</a
+      ><a name="371" href="Structure.Composition.html#319" class="Bound"
+      >op</a
+      ><a name="373"
+      > </a
+      ><a name="374" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="375"
+      > </a
+      ><a name="376" href="Structure.Composition.html#327" class="Bound"
+      >ext</a
+      ><a name="379" class="Symbol"
+      >)</a
+      ><a name="380"
+      > 
+               </a
+      ><a name="397" class="Symbol"
+      >;</a
+      ><a name="398"
+      > </a
+      ><a name="399" class="Field"
+      >refine</a
+      ><a name="405"
+      > </a
+      ><a name="406" class="Symbol"
+      >=</a
+      ><a name="407"
+      > </a
+      ><a name="408" class="Symbol"
+      >&#955;</a
+      ><a name="409"
+      > </a
+      ><a name="410" class="Symbol"
+      >{</a
+      ><a name="411"
+      > </a
+      ><a name="412" href="Structure.Composition.html#412" class="Bound"
+      >i&#8314;&#8314;</a
+      ><a name="415"
+      > </a
+      ><a name="416" href="Structure.Composition.html#416" class="Bound"
+      >op</a
+      ><a name="418"
+      > </a
+      ><a name="419" class="Symbol"
+      >(</a
+      ><a name="420" href="Structure.Composition.html#420" class="Bound"
+      >ext</a
+      ><a name="423"
+      > </a
+      ><a name="424" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="425"
+      > </a
+      ><a name="426" href="Structure.Composition.html#426" class="Bound"
+      >ext&#8314;</a
+      ><a name="430" class="Symbol"
+      >)</a
+      ><a name="431"
+      > </a
+      ><a name="432" href="Structure.Composition.html#432" class="Bound"
+      >ar</a
+      ><a name="434"
+      > </a
+      ><a name="435" class="Symbol"
+      >&#8594;</a
+      ><a name="436"
+      > </a
+      ><a name="437" href="Ornament.html#194" class="Field"
+      >refine</a
+      ><a name="443"
+      > </a
+      ><a name="444" href="Structure.Composition.html#221" class="Bound"
+      >&#964;&#8314;</a
+      ><a name="446"
+      > </a
+      ><a name="447" href="Structure.Composition.html#412" class="Bound"
+      >i&#8314;&#8314;</a
+      ><a name="450"
+      > </a
+      ><a name="451" class="Symbol"
+      >(</a
+      ><a name="452" href="Structure.Composition.html#416" class="Bound"
+      >op</a
+      ><a name="454"
+      > </a
+      ><a name="455" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="456"
+      > </a
+      ><a name="457" href="Structure.Composition.html#420" class="Bound"
+      >ext</a
+      ><a name="460" class="Symbol"
+      >)</a
+      ><a name="461"
+      > </a
+      ><a name="462" href="Structure.Composition.html#426" class="Bound"
+      >ext&#8314;</a
+      ><a name="466"
+      > </a
+      ><a name="467" href="Structure.Composition.html#432" class="Bound"
+      >ar</a
+      ><a name="469"
+      > </a
+      ><a name="470" class="Symbol"
+      >}</a
+      ><a name="471"
+      > 
+               </a
+      ><a name="488" class="Symbol"
+      >;</a
+      ><a name="489"
+      > </a
+      ><a name="490" class="Field"
+      >coh</a
+      ><a name="493"
+      > </a
+      ><a name="494" class="Symbol"
+      >=</a
+      ><a name="495"
+      > </a
+      ><a name="496" class="Symbol"
+      >&#955;</a
+      ><a name="497"
+      > </a
+      ><a name="498" class="Symbol"
+      >{</a
+      ><a name="499"
+      > </a
+      ><a name="500" href="Structure.Composition.html#500" class="Bound"
+      >i&#8314;&#8314;</a
+      ><a name="503"
+      > </a
+      ><a name="504" href="Structure.Composition.html#504" class="Bound"
+      >op</a
+      ><a name="506"
+      > </a
+      ><a name="507" class="Symbol"
+      >(</a
+      ><a name="508" href="Structure.Composition.html#508" class="Bound"
+      >ext</a
+      ><a name="511"
+      > </a
+      ><a name="512" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="513"
+      > </a
+      ><a name="514" href="Structure.Composition.html#514" class="Bound"
+      >ext&#8314;</a
+      ><a name="518" class="Symbol"
+      >)</a
+      ><a name="519"
+      > </a
+      ><a name="520" href="Structure.Composition.html#520" class="Bound"
+      >ar</a
+      ><a name="522"
+      > </a
+      ><a name="523" class="Symbol"
+      >&#8594;</a
+      ><a name="524"
+      > </a
+      ><a name="525" href="Stdlib.html#1291" class="Function"
+      >trans</a
+      ><a name="530"
+      > </a
+      ><a name="531" class="Symbol"
+      >(</a
+      ><a name="532" href="Stdlib.html#1376" class="Function"
+      >cong</a
+      ><a name="536"
+      > </a
+      ><a name="537" href="Structure.Composition.html#169" class="Bound"
+      >v</a
+      ><a name="538"
+      > </a
+      ><a name="539" class="Symbol"
+      >(</a
+      ><a name="540" href="Ornament.html#266" class="Field"
+      >coh</a
+      ><a name="543"
+      > </a
+      ><a name="544" href="Structure.Composition.html#221" class="Bound"
+      >&#964;&#8314;</a
+      ><a name="546"
+      > </a
+      ><a name="547" href="Structure.Composition.html#500" class="Bound"
+      >i&#8314;&#8314;</a
+      ><a name="550"
+      > </a
+      ><a name="551" class="Symbol"
+      >(</a
+      ><a name="552" href="Structure.Composition.html#504" class="Bound"
+      >op</a
+      ><a name="554"
+      > </a
+      ><a name="555" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="556"
+      > </a
+      ><a name="557" href="Structure.Composition.html#508" class="Bound"
+      >ext</a
+      ><a name="560" class="Symbol"
+      >)</a
+      ><a name="561"
+      > </a
+      ><a name="562" href="Structure.Composition.html#514" class="Bound"
+      >ext&#8314;</a
+      ><a name="566"
+      > </a
+      ><a name="567" href="Structure.Composition.html#520" class="Bound"
+      >ar</a
+      ><a name="569" class="Symbol"
+      >))</a
+      ><a name="571"
+      > 
+                                                        </a
+      ><a name="629" class="Symbol"
+      >(</a
+      ><a name="630" href="Ornament.html#266" class="Field"
+      >coh</a
+      ><a name="633"
+      > </a
+      ><a name="634" href="Structure.Composition.html#204" class="Bound"
+      >&#964;</a
+      ><a name="635"
+      > </a
+      ><a name="636" class="Symbol"
+      >(</a
+      ><a name="637" href="Structure.Composition.html#181" class="Bound"
+      >v&#8314;</a
+      ><a name="639"
+      > </a
+      ><a name="640" href="Structure.Composition.html#500" class="Bound"
+      >i&#8314;&#8314;</a
+      ><a name="643" class="Symbol"
+      >)</a
+      ><a name="644"
+      > </a
+      ><a name="645" href="Structure.Composition.html#504" class="Bound"
+      >op</a
+      ><a name="647"
+      > </a
+      ><a name="648" href="Structure.Composition.html#508" class="Bound"
+      >ext</a
+      ><a name="651"
+      > </a
+      ><a name="652" href="Structure.Composition.html#520" class="Bound"
+      >ar</a
+      ><a name="654" class="Symbol"
+      >)</a
+      ><a name="655"
+      > </a
+      ><a name="656" class="Symbol"
+      >}</a
+      ><a name="657"
+      > </a
+      ><a name="658" class="Symbol"
+      >}</a
+      ><a name="659"
+      >
+    </a
+      ><a name="664" class="Keyword"
+      >where</a
+      ><a name="669"
+      > </a
+      ><a name="670" class="Keyword"
+      >open</a
+      ><a name="674"
+      > </a
+      ><a name="675" href="Ornament.html#73" class="Module"
+      >COrn</a
+      ><a name="679"
+      >
+
+
+</a
+      ><a name="682" class="Keyword"
+      >module</a
+      ><a name="688"
+      > </a
+      ><a name="689" href="Structure.Composition.html#689" class="Module"
+      >Horizontal</a
+      ><a name="699"
+      >
+       </a
+      ><a name="707" class="Symbol"
+      >{</a
+      ><a name="708" href="Structure.Composition.html#708" class="Bound"
+      >I&#8314;</a
+      ><a name="710"
+      > </a
+      ><a name="711" href="Structure.Composition.html#711" class="Bound"
+      >I</a
+      ><a name="712" class="Symbol"
+      >}{</a
+      ><a name="714" href="Structure.Composition.html#714" class="Bound"
+      >&#931;&#8321;</a
+      ><a name="716"
+      > </a
+      ><a name="717" class="Symbol"
+      >:</a
+      ><a name="718"
+      > </a
+      ><a name="719" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="722"
+      > </a
+      ><a name="723" href="Structure.Composition.html#711" class="Bound"
+      >I</a
+      ><a name="724" class="Symbol"
+      >}{</a
+      ><a name="726" href="Structure.Composition.html#726" class="Bound"
+      >&#931;&#8322;</a
+      ><a name="728"
+      > </a
+      ><a name="729" class="Symbol"
+      >:</a
+      ><a name="730"
+      > </a
+      ><a name="731" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="734"
+      > </a
+      ><a name="735" href="Structure.Composition.html#711" class="Bound"
+      >I</a
+      ><a name="736" class="Symbol"
+      >}{</a
+      ><a name="738" href="Structure.Composition.html#738" class="Bound"
+      >v</a
+      ><a name="739"
+      > </a
+      ><a name="740" class="Symbol"
+      >:</a
+      ><a name="741"
+      > </a
+      ><a name="742" href="Structure.Composition.html#708" class="Bound"
+      >I&#8314;</a
+      ><a name="744"
+      > </a
+      ><a name="745" class="Symbol"
+      >&#8594;</a
+      ><a name="746"
+      > </a
+      ><a name="747" href="Structure.Composition.html#711" class="Bound"
+      >I</a
+      ><a name="748" class="Symbol"
+      >}</a
+      ><a name="749"
+      >
+       </a
+      ><a name="757" class="Symbol"
+      >(</a
+      ><a name="758" href="Structure.Composition.html#758" class="Bound"
+      >&#964;&#8321;</a
+      ><a name="760"
+      > </a
+      ><a name="761" class="Symbol"
+      >:</a
+      ><a name="762"
+      > </a
+      ><a name="763" href="Ornament.html#73" class="Record"
+      >COrn</a
+      ><a name="767"
+      > </a
+      ><a name="768" href="Structure.Composition.html#714" class="Bound"
+      >&#931;&#8321;</a
+      ><a name="770"
+      > </a
+      ><a name="771" href="Structure.Composition.html#708" class="Bound"
+      >I&#8314;</a
+      ><a name="773"
+      > </a
+      ><a name="774" href="Structure.Composition.html#738" class="Bound"
+      >v</a
+      ><a name="775" class="Symbol"
+      >)(</a
+      ><a name="777" href="Structure.Composition.html#777" class="Bound"
+      >&#964;&#8322;</a
+      ><a name="779"
+      > </a
+      ><a name="780" class="Symbol"
+      >:</a
+      ><a name="781"
+      > </a
+      ><a name="782" href="Ornament.html#73" class="Record"
+      >COrn</a
+      ><a name="786"
+      > </a
+      ><a name="787" href="Structure.Composition.html#726" class="Bound"
+      >&#931;&#8322;</a
+      ><a name="789"
+      > </a
+      ><a name="790" href="Structure.Composition.html#708" class="Bound"
+      >I&#8314;</a
+      ><a name="792"
+      > </a
+      ><a name="793" href="Structure.Composition.html#738" class="Bound"
+      >v</a
+      ><a name="794" class="Symbol"
+      >)</a
+      ><a name="795"
+      > 
+  </a
+      ><a name="799" class="Keyword"
+      >where</a
+      ><a name="804"
+      >
+
+  </a
+      ><a name="808" href="Structure.Composition.html#808" class="Function Operator"
+      >_&#8858;_</a
+      ><a name="811"
+      > </a
+      ><a name="812" class="Symbol"
+      >:</a
+      ><a name="813"
+      > </a
+      ><a name="814" href="Ornament.html#73" class="Record"
+      >COrn</a
+      ><a name="818"
+      > </a
+      ><a name="819" class="Symbol"
+      >(</a
+      ><a name="820" href="Structure.Composition.html#726" class="Bound"
+      >&#931;&#8322;</a
+      ><a name="822"
+      > </a
+      ><a name="823" href="Signature.html#587" class="Function Operator"
+      >&#8728;C</a
+      ><a name="825"
+      > </a
+      ><a name="826" href="Structure.Composition.html#714" class="Bound"
+      >&#931;&#8321;</a
+      ><a name="828" class="Symbol"
+      >)</a
+      ><a name="829"
+      > </a
+      ><a name="830" href="Structure.Composition.html#708" class="Bound"
+      >I&#8314;</a
+      ><a name="832"
+      > </a
+      ><a name="833" href="Structure.Composition.html#738" class="Bound"
+      >v</a
+      ><a name="834"
+      >
+  </a
+      ><a name="837" href="Structure.Composition.html#808" class="Function Operator"
+      >_&#8858;_</a
+      ><a name="840"
+      > </a
+      ><a name="841" class="Symbol"
+      >=</a
+      ><a name="842"
+      > </a
+      ><a name="843" class="Keyword"
+      >record</a
+      ><a name="849"
+      > </a
+      ><a name="850" class="Symbol"
+      >{</a
+      ><a name="851"
+      > </a
+      ><a name="852" class="Field"
+      >extend</a
+      ><a name="858"
+      > </a
+      ><a name="859" class="Symbol"
+      >=</a
+      ><a name="860"
+      > </a
+      ><a name="861" class="Symbol"
+      >&#955;</a
+      ><a name="862"
+      > </a
+      ><a name="863" class="Symbol"
+      >{</a
+      ><a name="864"
+      > </a
+      ><a name="865" href="Structure.Composition.html#865" class="Bound"
+      >i&#8314;</a
+      ><a name="867"
+      > </a
+      ><a name="868" class="Symbol"
+      >(</a
+      ><a name="869" href="Structure.Composition.html#869" class="Bound"
+      >op&#8321;</a
+      ><a name="872"
+      > </a
+      ><a name="873" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="874"
+      > </a
+      ><a name="875" href="Structure.Composition.html#875" class="Bound"
+      >ops&#8322;</a
+      ><a name="879" class="Symbol"
+      >)</a
+      ><a name="880"
+      > </a
+      ><a name="881" class="Symbol"
+      >&#8594;</a
+      ><a name="882"
+      > 
+                            </a
+      ><a name="912" href="Stdlib.html#467" class="Function"
+      >&#931;[</a
+      ><a name="914"
+      > </a
+      ><a name="915" href="Structure.Composition.html#915" class="Bound"
+      >ext&#8321;</a
+      ><a name="919"
+      > </a
+      ><a name="920" href="Stdlib.html#467" class="Function"
+      >&#8712;</a
+      ><a name="921"
+      > </a
+      ><a name="922" href="Ornament.html#153" class="Field"
+      >extend</a
+      ><a name="928"
+      > </a
+      ><a name="929" href="Structure.Composition.html#758" class="Bound"
+      >&#964;&#8321;</a
+      ><a name="931"
+      > </a
+      ><a name="932" href="Structure.Composition.html#865" class="Bound"
+      >i&#8314;</a
+      ><a name="934"
+      > </a
+      ><a name="935" href="Structure.Composition.html#869" class="Bound"
+      >op&#8321;</a
+      ><a name="938"
+      > </a
+      ><a name="939" href="Stdlib.html#467" class="Function"
+      >]</a
+      ><a name="940"
+      > 
+                            </a
+      ><a name="970" class="Symbol"
+      >((</a
+      ><a name="972" href="Structure.Composition.html#972" class="Bound"
+      >ar&#8321;</a
+      ><a name="975"
+      > </a
+      ><a name="976" class="Symbol"
+      >:</a
+      ><a name="977"
+      > </a
+      ><a name="978" href="Signature.html#343" class="Field"
+      >Ar</a
+      ><a name="980"
+      > </a
+      ><a name="981" href="Structure.Composition.html#714" class="Bound"
+      >&#931;&#8321;</a
+      ><a name="983"
+      > </a
+      ><a name="984" href="Structure.Composition.html#869" class="Bound"
+      >op&#8321;</a
+      ><a name="987" class="Symbol"
+      >)</a
+      ><a name="988"
+      > </a
+      ><a name="989" class="Symbol"
+      >&#8594;</a
+      ><a name="990"
+      > 
+                                  </a
+      ><a name="1026" href="Ornament.html#153" class="Field"
+      >extend</a
+      ><a name="1032"
+      > </a
+      ><a name="1033" href="Structure.Composition.html#777" class="Bound"
+      >&#964;&#8322;</a
+      ><a name="1035"
+      > </a
+      ><a name="1036" class="Symbol"
+      >(</a
+      ><a name="1037" href="Ornament.html#194" class="Field"
+      >refine</a
+      ><a name="1043"
+      > </a
+      ><a name="1044" href="Structure.Composition.html#758" class="Bound"
+      >&#964;&#8321;</a
+      ><a name="1046"
+      > </a
+      ><a name="1047" href="Structure.Composition.html#865" class="Bound"
+      >i&#8314;</a
+      ><a name="1049"
+      > </a
+      ><a name="1050" href="Structure.Composition.html#869" class="Bound"
+      >op&#8321;</a
+      ><a name="1053"
+      > </a
+      ><a name="1054" href="Structure.Composition.html#915" class="Bound"
+      >ext&#8321;</a
+      ><a name="1058"
+      > </a
+      ><a name="1059" href="Structure.Composition.html#972" class="Bound"
+      >ar&#8321;</a
+      ><a name="1062" class="Symbol"
+      >)</a
+      ><a name="1063"
+      > 
+                                            </a
+      ><a name="1109" class="Symbol"
+      >(</a
+      ><a name="1110" href="Stdlib.html#1131" class="Function"
+      >subst</a
+      ><a name="1115"
+      > </a
+      ><a name="1116" class="Symbol"
+      >(</a
+      ><a name="1117" href="Signature.html#320" class="Field"
+      >Op</a
+      ><a name="1119"
+      > </a
+      ><a name="1120" href="Structure.Composition.html#726" class="Bound"
+      >&#931;&#8322;</a
+      ><a name="1122" class="Symbol"
+      >)</a
+      ><a name="1123"
+      > 
+                                                   </a
+      ><a name="1176" class="Symbol"
+      >(</a
+      ><a name="1177" href="Stdlib.html#1221" class="Function"
+      >sym</a
+      ><a name="1180"
+      > </a
+      ><a name="1181" class="Symbol"
+      >(</a
+      ><a name="1182" href="Ornament.html#266" class="Field"
+      >coh</a
+      ><a name="1185"
+      > </a
+      ><a name="1186" href="Structure.Composition.html#758" class="Bound"
+      >&#964;&#8321;</a
+      ><a name="1188"
+      > </a
+      ><a name="1189" href="Structure.Composition.html#865" class="Bound"
+      >i&#8314;</a
+      ><a name="1191"
+      > </a
+      ><a name="1192" href="Structure.Composition.html#869" class="Bound"
+      >op&#8321;</a
+      ><a name="1195"
+      > </a
+      ><a name="1196" href="Structure.Composition.html#915" class="Bound"
+      >ext&#8321;</a
+      ><a name="1200"
+      > </a
+      ><a name="1201" href="Structure.Composition.html#972" class="Bound"
+      >ar&#8321;</a
+      ><a name="1204" class="Symbol"
+      >))</a
+      ><a name="1206"
+      > 
+                                                   </a
+      ><a name="1259" class="Symbol"
+      >(</a
+      ><a name="1260" href="Structure.Composition.html#875" class="Bound"
+      >ops&#8322;</a
+      ><a name="1264"
+      > </a
+      ><a name="1265" href="Structure.Composition.html#972" class="Bound"
+      >ar&#8321;</a
+      ><a name="1268" class="Symbol"
+      >)))</a
+      ><a name="1271"
+      > </a
+      ><a name="1272" class="Symbol"
+      >}</a
+      ><a name="1273"
+      >  
+               </a
+      ><a name="1291" class="Symbol"
+      >;</a
+      ><a name="1292"
+      > </a
+      ><a name="1293" class="Field"
+      >refine</a
+      ><a name="1299"
+      > </a
+      ><a name="1300" class="Symbol"
+      >=</a
+      ><a name="1301"
+      > </a
+      ><a name="1302" class="Symbol"
+      >&#955;</a
+      ><a name="1303"
+      > </a
+      ><a name="1304" class="Symbol"
+      >{</a
+      ><a name="1305" href="Structure.Composition.html#1305" class="Bound"
+      >i&#8314;</a
+      ><a name="1307"
+      > </a
+      ><a name="1308" class="Symbol"
+      >(</a
+      ><a name="1309" href="Structure.Composition.html#1309" class="Bound"
+      >op&#8321;</a
+      ><a name="1312"
+      > </a
+      ><a name="1313" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1314"
+      > </a
+      ><a name="1315" href="Structure.Composition.html#1315" class="Bound"
+      >ops&#8322;</a
+      ><a name="1319" class="Symbol"
+      >)</a
+      ><a name="1320"
+      > </a
+      ><a name="1321" class="Symbol"
+      >(</a
+      ><a name="1322" href="Structure.Composition.html#1322" class="Bound"
+      >ext&#8321;</a
+      ><a name="1326"
+      > </a
+      ><a name="1327" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1328"
+      > </a
+      ><a name="1329" href="Structure.Composition.html#1329" class="Bound"
+      >exts&#8322;</a
+      ><a name="1334" class="Symbol"
+      >)</a
+      ><a name="1335"
+      > </a
+      ><a name="1336" class="Symbol"
+      >(</a
+      ><a name="1337" href="Structure.Composition.html#1337" class="Bound"
+      >ar&#8321;</a
+      ><a name="1340"
+      > </a
+      ><a name="1341" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1342"
+      > </a
+      ><a name="1343" href="Structure.Composition.html#1343" class="Bound"
+      >ar&#8322;</a
+      ><a name="1346" class="Symbol"
+      >)</a
+      ><a name="1347"
+      > </a
+      ><a name="1348" class="Symbol"
+      >&#8594;</a
+      ><a name="1349"
+      > 
+                            </a
+      ><a name="1379" href="Ornament.html#194" class="Field"
+      >refine</a
+      ><a name="1385"
+      > </a
+      ><a name="1386" href="Structure.Composition.html#777" class="Bound"
+      >&#964;&#8322;</a
+      ><a name="1388"
+      > </a
+      ><a name="1389" class="Symbol"
+      >(</a
+      ><a name="1390" href="Ornament.html#194" class="Field"
+      >refine</a
+      ><a name="1396"
+      > </a
+      ><a name="1397" href="Structure.Composition.html#758" class="Bound"
+      >&#964;&#8321;</a
+      ><a name="1399"
+      > </a
+      ><a name="1400" href="Structure.Composition.html#1305" class="Bound"
+      >i&#8314;</a
+      ><a name="1402"
+      > </a
+      ><a name="1403" href="Structure.Composition.html#1309" class="Bound"
+      >op&#8321;</a
+      ><a name="1406"
+      > </a
+      ><a name="1407" href="Structure.Composition.html#1322" class="Bound"
+      >ext&#8321;</a
+      ><a name="1411"
+      > </a
+      ><a name="1412" href="Structure.Composition.html#1337" class="Bound"
+      >ar&#8321;</a
+      ><a name="1415" class="Symbol"
+      >)</a
+      ><a name="1416"
+      > 
+                                   </a
+      ><a name="1453" class="Symbol"
+      >(</a
+      ><a name="1454" href="Stdlib.html#1131" class="Function"
+      >subst</a
+      ><a name="1459"
+      > </a
+      ><a name="1460" class="Symbol"
+      >(</a
+      ><a name="1461" href="Signature.html#320" class="Field"
+      >Op</a
+      ><a name="1463"
+      > </a
+      ><a name="1464" href="Structure.Composition.html#726" class="Bound"
+      >&#931;&#8322;</a
+      ><a name="1466" class="Symbol"
+      >)</a
+      ><a name="1467"
+      > </a
+      ><a name="1468" class="Symbol"
+      >(</a
+      ><a name="1469" href="Stdlib.html#1221" class="Function"
+      >sym</a
+      ><a name="1472"
+      > </a
+      ><a name="1473" class="Symbol"
+      >(</a
+      ><a name="1474" href="Ornament.html#266" class="Field"
+      >coh</a
+      ><a name="1477"
+      > </a
+      ><a name="1478" href="Structure.Composition.html#758" class="Bound"
+      >&#964;&#8321;</a
+      ><a name="1480"
+      > </a
+      ><a name="1481" href="Structure.Composition.html#1305" class="Bound"
+      >i&#8314;</a
+      ><a name="1483"
+      > </a
+      ><a name="1484" href="Structure.Composition.html#1309" class="Bound"
+      >op&#8321;</a
+      ><a name="1487"
+      > </a
+      ><a name="1488" href="Structure.Composition.html#1322" class="Bound"
+      >ext&#8321;</a
+      ><a name="1492"
+      > </a
+      ><a name="1493" href="Structure.Composition.html#1337" class="Bound"
+      >ar&#8321;</a
+      ><a name="1496" class="Symbol"
+      >))</a
+      ><a name="1498"
+      >
+                                          </a
+      ><a name="1541" class="Symbol"
+      >(</a
+      ><a name="1542" href="Structure.Composition.html#1315" class="Bound"
+      >ops&#8322;</a
+      ><a name="1546"
+      > </a
+      ><a name="1547" href="Structure.Composition.html#1337" class="Bound"
+      >ar&#8321;</a
+      ><a name="1550" class="Symbol"
+      >))</a
+      ><a name="1552"
+      > 
+                                   </a
+      ><a name="1589" class="Symbol"
+      >(</a
+      ><a name="1590" href="Structure.Composition.html#1329" class="Bound"
+      >exts&#8322;</a
+      ><a name="1595"
+      > </a
+      ><a name="1596" href="Structure.Composition.html#1337" class="Bound"
+      >ar&#8321;</a
+      ><a name="1599" class="Symbol"
+      >)</a
+      ><a name="1600"
+      > 
+                                   </a
+      ><a name="1637" class="Symbol"
+      >(</a
+      ><a name="1638" href="Stdlib.html#1481" class="Function"
+      >subst&#8322;</a
+      ><a name="1644"
+      > </a
+      ><a name="1645" class="Symbol"
+      >(&#955;</a
+      ><a name="1647"
+      > </a
+      ><a name="1648" href="Structure.Composition.html#1648" class="Bound"
+      >i</a
+      ><a name="1649"
+      > </a
+      ><a name="1650" href="Structure.Composition.html#1650" class="Bound"
+      >op&#8322;</a
+      ><a name="1653"
+      > </a
+      ><a name="1654" class="Symbol"
+      >&#8594;</a
+      ><a name="1655"
+      > </a
+      ><a name="1656" href="Signature.html#343" class="Field"
+      >Ar</a
+      ><a name="1658"
+      > </a
+      ><a name="1659" href="Structure.Composition.html#726" class="Bound"
+      >&#931;&#8322;</a
+      ><a name="1661"
+      > </a
+      ><a name="1662" class="Symbol"
+      >{</a
+      ><a name="1663" href="Structure.Composition.html#1648" class="Bound"
+      >i</a
+      ><a name="1664" class="Symbol"
+      >}</a
+      ><a name="1665"
+      > </a
+      ><a name="1666" href="Structure.Composition.html#1650" class="Bound"
+      >op&#8322;</a
+      ><a name="1669" class="Symbol"
+      >)</a
+      ><a name="1670"
+      > 
+                                            </a
+      ><a name="1716" class="Symbol"
+      >(</a
+      ><a name="1717" href="Stdlib.html#1221" class="Function"
+      >sym</a
+      ><a name="1720"
+      > </a
+      ><a name="1721" class="Symbol"
+      >(</a
+      ><a name="1722" href="Ornament.html#266" class="Field"
+      >coh</a
+      ><a name="1725"
+      > </a
+      ><a name="1726" href="Structure.Composition.html#758" class="Bound"
+      >&#964;&#8321;</a
+      ><a name="1728"
+      > </a
+      ><a name="1729" href="Structure.Composition.html#1305" class="Bound"
+      >i&#8314;</a
+      ><a name="1731"
+      > </a
+      ><a name="1732" href="Structure.Composition.html#1309" class="Bound"
+      >op&#8321;</a
+      ><a name="1735"
+      > </a
+      ><a name="1736" href="Structure.Composition.html#1322" class="Bound"
+      >ext&#8321;</a
+      ><a name="1740"
+      > </a
+      ><a name="1741" href="Structure.Composition.html#1337" class="Bound"
+      >ar&#8321;</a
+      ><a name="1744" class="Symbol"
+      >))</a
+      ><a name="1746"
+      > 
+                                            </a
+      ><a name="1792" href="Structure.Composition.html#1343" class="Bound"
+      >ar&#8322;</a
+      ><a name="1795" class="Symbol"
+      >)</a
+      ><a name="1796"
+      > </a
+      ><a name="1797" class="Symbol"
+      >}</a
+      ><a name="1798"
+      >
+               </a
+      ><a name="1814" class="Symbol"
+      >;</a
+      ><a name="1815"
+      > </a
+      ><a name="1816" class="Field"
+      >coh</a
+      ><a name="1819"
+      > </a
+      ><a name="1820" class="Symbol"
+      >=</a
+      ><a name="1821"
+      > </a
+      ><a name="1822" class="Symbol"
+      >&#955;</a
+      ><a name="1823"
+      > </a
+      ><a name="1824" class="Symbol"
+      >{</a
+      ><a name="1825" href="Structure.Composition.html#1825" class="Bound"
+      >i&#8314;</a
+      ><a name="1827"
+      > </a
+      ><a name="1828" class="Symbol"
+      >(</a
+      ><a name="1829" href="Structure.Composition.html#1829" class="Bound"
+      >op&#8321;</a
+      ><a name="1832"
+      > </a
+      ><a name="1833" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1834"
+      > </a
+      ><a name="1835" href="Structure.Composition.html#1835" class="Bound"
+      >ops&#8322;</a
+      ><a name="1839" class="Symbol"
+      >)</a
+      ><a name="1840"
+      > </a
+      ><a name="1841" class="Symbol"
+      >(</a
+      ><a name="1842" href="Structure.Composition.html#1842" class="Bound"
+      >ext&#8321;</a
+      ><a name="1846"
+      > </a
+      ><a name="1847" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1848"
+      > </a
+      ><a name="1849" href="Structure.Composition.html#1849" class="Bound"
+      >exts&#8322;</a
+      ><a name="1854" class="Symbol"
+      >)</a
+      ><a name="1855"
+      > </a
+      ><a name="1856" class="Symbol"
+      >(</a
+      ><a name="1857" href="Structure.Composition.html#1857" class="Bound"
+      >ar&#8321;</a
+      ><a name="1860"
+      > </a
+      ><a name="1861" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="1862"
+      > </a
+      ><a name="1863" href="Structure.Composition.html#1863" class="Bound"
+      >ar&#8322;</a
+      ><a name="1866" class="Symbol"
+      >)</a
+      ><a name="1867"
+      > </a
+      ><a name="1868" class="Symbol"
+      >&#8594;</a
+      ><a name="1869"
+      >
+                       </a
+      ><a name="1893" href="Stdlib.html#1291" class="Function"
+      >trans</a
+      ><a name="1898"
+      > </a
+      ><a name="1899" class="Symbol"
+      >(</a
+      ><a name="1900" href="Ornament.html#266" class="Field"
+      >coh</a
+      ><a name="1903"
+      > </a
+      ><a name="1904" href="Structure.Composition.html#777" class="Bound"
+      >&#964;&#8322;</a
+      ><a name="1906"
+      > </a
+      ><a name="1907" class="Symbol"
+      >(</a
+      ><a name="1908" href="Ornament.html#194" class="Field"
+      >refine</a
+      ><a name="1914"
+      > </a
+      ><a name="1915" href="Structure.Composition.html#758" class="Bound"
+      >&#964;&#8321;</a
+      ><a name="1917"
+      > </a
+      ><a name="1918" href="Structure.Composition.html#1825" class="Bound"
+      >i&#8314;</a
+      ><a name="1920"
+      > </a
+      ><a name="1921" href="Structure.Composition.html#1829" class="Bound"
+      >op&#8321;</a
+      ><a name="1924"
+      > </a
+      ><a name="1925" href="Structure.Composition.html#1842" class="Bound"
+      >ext&#8321;</a
+      ><a name="1929"
+      > </a
+      ><a name="1930" href="Structure.Composition.html#1857" class="Bound"
+      >ar&#8321;</a
+      ><a name="1933" class="Symbol"
+      >)</a
+      ><a name="1934"
+      > 
+                                   </a
+      ><a name="1971" class="Symbol"
+      >(</a
+      ><a name="1972" href="Stdlib.html#1131" class="Function"
+      >subst</a
+      ><a name="1977"
+      > </a
+      ><a name="1978" class="Symbol"
+      >(</a
+      ><a name="1979" href="Signature.html#320" class="Field"
+      >Op</a
+      ><a name="1981"
+      > </a
+      ><a name="1982" href="Structure.Composition.html#726" class="Bound"
+      >&#931;&#8322;</a
+      ><a name="1984" class="Symbol"
+      >)</a
+      ><a name="1985"
+      > </a
+      ><a name="1986" class="Symbol"
+      >(</a
+      ><a name="1987" href="Stdlib.html#1221" class="Function"
+      >sym</a
+      ><a name="1990"
+      > </a
+      ><a name="1991" class="Symbol"
+      >(</a
+      ><a name="1992" href="Ornament.html#266" class="Field"
+      >coh</a
+      ><a name="1995"
+      > </a
+      ><a name="1996" href="Structure.Composition.html#758" class="Bound"
+      >&#964;&#8321;</a
+      ><a name="1998"
+      > </a
+      ><a name="1999" href="Structure.Composition.html#1825" class="Bound"
+      >i&#8314;</a
+      ><a name="2001"
+      > </a
+      ><a name="2002" href="Structure.Composition.html#1829" class="Bound"
+      >op&#8321;</a
+      ><a name="2005"
+      > </a
+      ><a name="2006" href="Structure.Composition.html#1842" class="Bound"
+      >ext&#8321;</a
+      ><a name="2010"
+      > </a
+      ><a name="2011" href="Structure.Composition.html#1857" class="Bound"
+      >ar&#8321;</a
+      ><a name="2014" class="Symbol"
+      >))</a
+      ><a name="2016"
+      >
+                                          </a
+      ><a name="2059" class="Symbol"
+      >(</a
+      ><a name="2060" href="Structure.Composition.html#1835" class="Bound"
+      >ops&#8322;</a
+      ><a name="2064"
+      > </a
+      ><a name="2065" href="Structure.Composition.html#1857" class="Bound"
+      >ar&#8321;</a
+      ><a name="2068" class="Symbol"
+      >))</a
+      ><a name="2070"
+      > 
+                                   </a
+      ><a name="2107" class="Symbol"
+      >(</a
+      ><a name="2108" href="Structure.Composition.html#1849" class="Bound"
+      >exts&#8322;</a
+      ><a name="2113"
+      > </a
+      ><a name="2114" href="Structure.Composition.html#1857" class="Bound"
+      >ar&#8321;</a
+      ><a name="2117" class="Symbol"
+      >)</a
+      ><a name="2118"
+      > 
+                                   </a
+      ><a name="2155" class="Symbol"
+      >(</a
+      ><a name="2156" href="Stdlib.html#1481" class="Function"
+      >subst&#8322;</a
+      ><a name="2162"
+      > </a
+      ><a name="2163" class="Symbol"
+      >(&#955;</a
+      ><a name="2165"
+      > </a
+      ><a name="2166" href="Structure.Composition.html#2166" class="Bound"
+      >i</a
+      ><a name="2167"
+      > </a
+      ><a name="2168" href="Structure.Composition.html#2168" class="Bound"
+      >op&#8322;</a
+      ><a name="2171"
+      > </a
+      ><a name="2172" class="Symbol"
+      >&#8594;</a
+      ><a name="2173"
+      > </a
+      ><a name="2174" href="Signature.html#343" class="Field"
+      >Ar</a
+      ><a name="2176"
+      > </a
+      ><a name="2177" href="Structure.Composition.html#726" class="Bound"
+      >&#931;&#8322;</a
+      ><a name="2179"
+      > </a
+      ><a name="2180" class="Symbol"
+      >{</a
+      ><a name="2181" href="Structure.Composition.html#2166" class="Bound"
+      >i</a
+      ><a name="2182" class="Symbol"
+      >}</a
+      ><a name="2183"
+      > </a
+      ><a name="2184" href="Structure.Composition.html#2168" class="Bound"
+      >op&#8322;</a
+      ><a name="2187" class="Symbol"
+      >)</a
+      ><a name="2188"
+      > 
+                                           </a
+      ><a name="2233" class="Symbol"
+      >(</a
+      ><a name="2234" href="Stdlib.html#1221" class="Function"
+      >sym</a
+      ><a name="2237"
+      > </a
+      ><a name="2238" class="Symbol"
+      >(</a
+      ><a name="2239" href="Ornament.html#266" class="Field"
+      >coh</a
+      ><a name="2242"
+      > </a
+      ><a name="2243" href="Structure.Composition.html#758" class="Bound"
+      >&#964;&#8321;</a
+      ><a name="2245"
+      > </a
+      ><a name="2246" href="Structure.Composition.html#1825" class="Bound"
+      >i&#8314;</a
+      ><a name="2248"
+      > </a
+      ><a name="2249" href="Structure.Composition.html#1829" class="Bound"
+      >op&#8321;</a
+      ><a name="2252"
+      > </a
+      ><a name="2253" href="Structure.Composition.html#1842" class="Bound"
+      >ext&#8321;</a
+      ><a name="2257"
+      > </a
+      ><a name="2258" href="Structure.Composition.html#1857" class="Bound"
+      >ar&#8321;</a
+      ><a name="2261" class="Symbol"
+      >))</a
+      ><a name="2263"
+      > 
+                                           </a
+      ><a name="2308" href="Structure.Composition.html#1863" class="Bound"
+      >ar&#8322;</a
+      ><a name="2311" class="Symbol"
+      >))</a
+      ><a name="2313"
+      > 
+                             </a
+      ><a name="2344" class="Symbol"
+      >(</a
+      ><a name="2345" href="Stdlib.html#1221" class="Function"
+      >sym</a
+      ><a name="2348"
+      > </a
+      ><a name="2349" class="Symbol"
+      >(</a
+      ><a name="2350" href="Stdlib.html#1632" class="Function"
+      >cong&#8323;</a
+      ><a name="2355"
+      > </a
+      ><a name="2356" class="Symbol"
+      >(&#955;</a
+      ><a name="2358"
+      > </a
+      ><a name="2359" href="Structure.Composition.html#2359" class="Bound"
+      >i</a
+      ><a name="2360"
+      > </a
+      ><a name="2361" href="Structure.Composition.html#2361" class="Bound"
+      >op&#8322;</a
+      ><a name="2364"
+      > </a
+      ><a name="2365" class="Symbol"
+      >&#8594;</a
+      ><a name="2366"
+      > </a
+      ><a name="2367" href="Signature.html#371" class="Field"
+      >Ty</a
+      ><a name="2369"
+      > </a
+      ><a name="2370" href="Structure.Composition.html#726" class="Bound"
+      >&#931;&#8322;</a
+      ><a name="2372"
+      > </a
+      ><a name="2373" class="Symbol"
+      >{</a
+      ><a name="2374" href="Structure.Composition.html#2359" class="Bound"
+      >i</a
+      ><a name="2375" class="Symbol"
+      >}{</a
+      ><a name="2377" href="Structure.Composition.html#2361" class="Bound"
+      >op&#8322;</a
+      ><a name="2380" class="Symbol"
+      >})</a
+      ><a name="2382"
+      > 
+                                         </a
+      ><a name="2425" class="Symbol"
+      >(</a
+      ><a name="2426" href="Stdlib.html#1221" class="Function"
+      >sym</a
+      ><a name="2429"
+      > </a
+      ><a name="2430" class="Symbol"
+      >(</a
+      ><a name="2431" href="Ornament.html#266" class="Field"
+      >coh</a
+      ><a name="2434"
+      > </a
+      ><a name="2435" href="Structure.Composition.html#758" class="Bound"
+      >&#964;&#8321;</a
+      ><a name="2437"
+      > </a
+      ><a name="2438" href="Structure.Composition.html#1825" class="Bound"
+      >i&#8314;</a
+      ><a name="2440"
+      > </a
+      ><a name="2441" href="Structure.Composition.html#1829" class="Bound"
+      >op&#8321;</a
+      ><a name="2444"
+      > </a
+      ><a name="2445" href="Structure.Composition.html#1842" class="Bound"
+      >ext&#8321;</a
+      ><a name="2449"
+      > </a
+      ><a name="2450" href="Structure.Composition.html#1857" class="Bound"
+      >ar&#8321;</a
+      ><a name="2453" class="Symbol"
+      >))))</a
+      ><a name="2457"
+      > </a
+      ><a name="2458" class="Symbol"
+      >}</a
+      ><a name="2459"
+      > </a
+      ><a name="2460" class="Symbol"
+      >}</a
+      ><a name="2461"
+      >
+    </a
+      ><a name="2466" class="Keyword"
+      >where</a
+      ><a name="2471"
+      > </a
+      ><a name="2472" class="Keyword"
+      >open</a
+      ><a name="2476"
+      > </a
+      ><a name="2477" href="Ornament.html#73" class="Module"
+      >COrn</a
+      ><a name="2481"
+      >
+          </a
+      ><a name="2492" class="Keyword"
+      >open</a
+      ><a name="2496"
+      > </a
+      ><a name="2497" href="Signature.html#261" class="Module"
+      >Sig</a
+      ><a name="2500"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

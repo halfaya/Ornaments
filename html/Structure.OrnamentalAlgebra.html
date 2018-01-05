@@ -1,0 +1,321 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Structure.OrnamentalAlgebra</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Keyword"
+      >open</a
+      ><a name="5"
+      > </a
+      ><a name="6" class="Keyword"
+      >import</a
+      ><a name="12"
+      > </a
+      ><a name="13" class="Module"
+      >Stdlib</a
+      ><a name="19"
+      >
+
+</a
+      ><a name="21" class="Keyword"
+      >open</a
+      ><a name="25"
+      > </a
+      ><a name="26" class="Keyword"
+      >import</a
+      ><a name="32"
+      > </a
+      ><a name="33" href="Signature.html#1" class="Module"
+      >Signature</a
+      ><a name="42"
+      > </a
+      ><a name="43" class="Keyword"
+      >hiding</a
+      ><a name="49"
+      > </a
+      ><a name="50" class="Symbol"
+      >(</a
+      ><a name="51"
+      >_&#8728;_</a
+      ><a name="54" class="Symbol"
+      >)</a
+      ><a name="55"
+      >
+</a
+      ><a name="56" class="Keyword"
+      >open</a
+      ><a name="60"
+      > </a
+      ><a name="61" class="Keyword"
+      >import</a
+      ><a name="67"
+      > </a
+      ><a name="68" href="Cartesian.html#1" class="Module"
+      >Cartesian</a
+      ><a name="77"
+      >
+
+</a
+      ><a name="79" class="Keyword"
+      >module</a
+      ><a name="85"
+      > </a
+      ><a name="86" href="Structure.OrnamentalAlgebra.html#1" class="Module"
+      >Structure.OrnamentalAlgebra</a
+      ><a name="113"
+      > 
+       </a
+      ><a name="122" class="Symbol"
+      >{</a
+      ><a name="123" href="Structure.OrnamentalAlgebra.html#123" class="Bound"
+      >I&#8314;</a
+      ><a name="125"
+      > </a
+      ><a name="126" href="Structure.OrnamentalAlgebra.html#126" class="Bound"
+      >I</a
+      ><a name="127" class="Symbol"
+      >}{</a
+      ><a name="129" href="Structure.OrnamentalAlgebra.html#129" class="Bound"
+      >&#931;&#8314;</a
+      ><a name="131"
+      > </a
+      ><a name="132" class="Symbol"
+      >:</a
+      ><a name="133"
+      > </a
+      ><a name="134" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="137"
+      > </a
+      ><a name="138" href="Structure.OrnamentalAlgebra.html#123" class="Bound"
+      >I&#8314;</a
+      ><a name="140" class="Symbol"
+      >}{</a
+      ><a name="142" href="Structure.OrnamentalAlgebra.html#142" class="Bound"
+      >&#931;</a
+      ><a name="143"
+      > </a
+      ><a name="144" class="Symbol"
+      >:</a
+      ><a name="145"
+      > </a
+      ><a name="146" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="149"
+      > </a
+      ><a name="150" href="Structure.OrnamentalAlgebra.html#126" class="Bound"
+      >I</a
+      ><a name="151" class="Symbol"
+      >}{</a
+      ><a name="153" href="Structure.OrnamentalAlgebra.html#153" class="Bound"
+      >v</a
+      ><a name="154"
+      > </a
+      ><a name="155" class="Symbol"
+      >:</a
+      ><a name="156"
+      > </a
+      ><a name="157" href="Structure.OrnamentalAlgebra.html#123" class="Bound"
+      >I&#8314;</a
+      ><a name="159"
+      > </a
+      ><a name="160" class="Symbol"
+      >&#8594;</a
+      ><a name="161"
+      > </a
+      ><a name="162" href="Structure.OrnamentalAlgebra.html#126" class="Bound"
+      >I</a
+      ><a name="163" class="Symbol"
+      >}</a
+      ><a name="164"
+      >
+       </a
+      ><a name="172" class="Symbol"
+      >(</a
+      ><a name="173" href="Structure.OrnamentalAlgebra.html#173" class="Bound"
+      >&#964;</a
+      ><a name="174"
+      > </a
+      ><a name="175" class="Symbol"
+      >:</a
+      ><a name="176"
+      > </a
+      ><a name="177" href="Cartesian.html#87" class="Record"
+      >Cartesian</a
+      ><a name="186"
+      > </a
+      ><a name="187" href="Structure.OrnamentalAlgebra.html#129" class="Bound"
+      >&#931;&#8314;</a
+      ><a name="189"
+      > </a
+      ><a name="190" href="Structure.OrnamentalAlgebra.html#142" class="Bound"
+      >&#931;</a
+      ><a name="191"
+      > </a
+      ><a name="192" href="Structure.OrnamentalAlgebra.html#153" class="Bound"
+      >v</a
+      ><a name="193" class="Symbol"
+      >)</a
+      ><a name="194"
+      >
+  </a
+      ><a name="197" class="Keyword"
+      >where</a
+      ><a name="202"
+      >
+
+</a
+      ><a name="204" href="Structure.OrnamentalAlgebra.html#204" class="Function"
+      >forget</a
+      ><a name="210"
+      > </a
+      ><a name="211" class="Symbol"
+      >:</a
+      ><a name="212"
+      > </a
+      ><a name="213" class="Symbol"
+      >&#8704;{</a
+      ><a name="215" href="Structure.OrnamentalAlgebra.html#215" class="Bound"
+      >i&#8314;</a
+      ><a name="217" class="Symbol"
+      >}</a
+      ><a name="218"
+      > </a
+      ><a name="219" class="Symbol"
+      >&#8594;</a
+      ><a name="220"
+      > </a
+      ><a name="221" href="Signature.html#407" class="Function Operator"
+      >&#10214;</a
+      ><a name="222"
+      > </a
+      ><a name="223" href="Structure.OrnamentalAlgebra.html#129" class="Bound"
+      >&#931;&#8314;</a
+      ><a name="225"
+      > </a
+      ><a name="226" href="Signature.html#407" class="Function Operator"
+      >&#10215;</a
+      ><a name="227"
+      > </a
+      ><a name="228" class="Symbol"
+      >(</a
+      ><a name="229" href="Signature.html#520" class="Datatype"
+      >&#956;</a
+      ><a name="230"
+      > </a
+      ><a name="231" href="Structure.OrnamentalAlgebra.html#142" class="Bound"
+      >&#931;</a
+      ><a name="232"
+      > </a
+      ><a name="233" href="Stdlib.html#1928" class="Function Operator"
+      >&#8728;</a
+      ><a name="234"
+      > </a
+      ><a name="235" href="Structure.OrnamentalAlgebra.html#153" class="Bound"
+      >v</a
+      ><a name="236" class="Symbol"
+      >)</a
+      ><a name="237"
+      > </a
+      ><a name="238" href="Structure.OrnamentalAlgebra.html#215" class="Bound"
+      >i&#8314;</a
+      ><a name="240"
+      > </a
+      ><a name="241" class="Symbol"
+      >&#8594;</a
+      ><a name="242"
+      > </a
+      ><a name="243" href="Signature.html#520" class="Datatype"
+      >&#956;</a
+      ><a name="244"
+      > </a
+      ><a name="245" href="Structure.OrnamentalAlgebra.html#142" class="Bound"
+      >&#931;</a
+      ><a name="246"
+      > </a
+      ><a name="247" class="Symbol"
+      >(</a
+      ><a name="248" href="Structure.OrnamentalAlgebra.html#153" class="Bound"
+      >v</a
+      ><a name="249"
+      > </a
+      ><a name="250" href="Structure.OrnamentalAlgebra.html#215" class="Bound"
+      >i&#8314;</a
+      ><a name="252" class="Symbol"
+      >)</a
+      ><a name="253"
+      >
+</a
+      ><a name="254" href="Structure.OrnamentalAlgebra.html#204" class="Function"
+      >forget</a
+      ><a name="260"
+      > </a
+      ><a name="261" class="Symbol"
+      >{</a
+      ><a name="262" href="Structure.OrnamentalAlgebra.html#262" class="Bound"
+      >i&#8314;</a
+      ><a name="264" class="Symbol"
+      >}</a
+      ><a name="265"
+      > </a
+      ><a name="266" href="Structure.OrnamentalAlgebra.html#266" class="Bound"
+      >xs</a
+      ><a name="268"
+      > </a
+      ><a name="269" class="Symbol"
+      >=</a
+      ><a name="270"
+      > </a
+      ><a name="271" href="Signature.html#558" class="InductiveConstructor Operator"
+      >&#10216;</a
+      ><a name="272"
+      > </a
+      ><a name="273" href="Cartesian.html#379" class="Function Operator"
+      >&#10214;</a
+      ><a name="274"
+      > </a
+      ><a name="275" href="Structure.OrnamentalAlgebra.html#173" class="Bound"
+      >&#964;</a
+      ><a name="276"
+      > </a
+      ><a name="277" href="Cartesian.html#379" class="Function Operator"
+      >&#10215;C</a
+      ><a name="279"
+      > </a
+      ><a name="280" class="Symbol"
+      >(</a
+      ><a name="281" href="Signature.html#520" class="Datatype"
+      >&#956;</a
+      ><a name="282"
+      > </a
+      ><a name="283" href="Structure.OrnamentalAlgebra.html#142" class="Bound"
+      >&#931;</a
+      ><a name="284"
+      > </a
+      ><a name="285" class="Symbol"
+      >)</a
+      ><a name="286"
+      > </a
+      ><a name="287" href="Structure.OrnamentalAlgebra.html#262" class="Bound"
+      >i&#8314;</a
+      ><a name="289"
+      > </a
+      ><a name="290" href="Structure.OrnamentalAlgebra.html#266" class="Bound"
+      >xs</a
+      ><a name="292"
+      > </a
+      ><a name="293" href="Signature.html#558" class="InductiveConstructor Operator"
+      >&#10217;</a
+      ><a name="294"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

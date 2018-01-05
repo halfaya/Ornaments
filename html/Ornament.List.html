@@ -1,0 +1,546 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Ornament.List</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Keyword"
+      >module</a
+      ><a name="7"
+      > </a
+      ><a name="8" href="Ornament.List.html#1" class="Module"
+      >Ornament.List</a
+      ><a name="21"
+      > </a
+      ><a name="22" class="Keyword"
+      >where</a
+      ><a name="27"
+      >
+
+</a
+      ><a name="29" class="Keyword"
+      >open</a
+      ><a name="33"
+      > </a
+      ><a name="34" class="Keyword"
+      >import</a
+      ><a name="40"
+      > </a
+      ><a name="41" class="Module"
+      >Stdlib</a
+      ><a name="47"
+      >
+</a
+      ><a name="48" class="Keyword"
+      >open</a
+      ><a name="52"
+      > </a
+      ><a name="53" class="Keyword"
+      >import</a
+      ><a name="59"
+      > </a
+      ><a name="60" href="Ornament.html#1" class="Module"
+      >Ornament</a
+      ><a name="68"
+      >
+</a
+      ><a name="69" class="Keyword"
+      >open</a
+      ><a name="73"
+      > </a
+      ><a name="74" class="Keyword"
+      >import</a
+      ><a name="80"
+      > </a
+      ><a name="81" href="Signature.html#1" class="Module"
+      >Signature</a
+      ><a name="90"
+      >
+</a
+      ><a name="91" class="Keyword"
+      >open</a
+      ><a name="95"
+      > </a
+      ><a name="96" class="Keyword"
+      >import</a
+      ><a name="102"
+      > </a
+      ><a name="103" href="Signature.Nat.html#1" class="Module"
+      >Signature.Nat</a
+      ><a name="116"
+      >
+
+</a
+      ><a name="118" href="Ornament.List.html#118" class="Function"
+      >&#964;List</a
+      ><a name="123"
+      > </a
+      ><a name="124" class="Symbol"
+      >:</a
+      ><a name="125"
+      > </a
+      ><a name="126" class="PrimitiveType"
+      >Set</a
+      ><a name="129"
+      > </a
+      ><a name="130" class="Symbol"
+      >&#8594;</a
+      ><a name="131"
+      > </a
+      ><a name="132" href="Ornament.html#73" class="Record"
+      >COrn</a
+      ><a name="136"
+      > </a
+      ><a name="137" href="Signature.Nat.html#154" class="Function"
+      >&#931;Nat</a
+      ><a name="141"
+      > </a
+      ><a name="142" href="Stdlib.html#718" class="Record"
+      >&#8868;</a
+      ><a name="143"
+      > </a
+      ><a name="144" href="Stdlib.html#1886" class="Function"
+      >id</a
+      ><a name="146"
+      >
+</a
+      ><a name="147" href="Ornament.List.html#118" class="Function"
+      >&#964;List</a
+      ><a name="152"
+      > </a
+      ><a name="153" href="Ornament.List.html#153" class="Bound"
+      >A</a
+      ><a name="154"
+      > </a
+      ><a name="155" class="Symbol"
+      >=</a
+      ><a name="156"
+      > </a
+      ><a name="157" class="Keyword"
+      >record</a
+      ><a name="163"
+      > </a
+      ><a name="164" class="Symbol"
+      >{</a
+      ><a name="165"
+      > </a
+      ><a name="166" class="Field"
+      >extend</a
+      ><a name="172"
+      > </a
+      ><a name="173" class="Symbol"
+      >=</a
+      ><a name="174"
+      > </a
+      ><a name="175" href="Ornament.List.html#301" class="Function"
+      >extendList</a
+      ><a name="185"
+      > 
+                 </a
+      ><a name="204" class="Symbol"
+      >;</a
+      ><a name="205"
+      > </a
+      ><a name="206" class="Field"
+      >refine</a
+      ><a name="212"
+      > </a
+      ><a name="213" class="Symbol"
+      >=</a
+      ><a name="214"
+      > </a
+      ><a name="215" href="Ornament.List.html#430" class="Function"
+      >refineList</a
+      ><a name="225"
+      > 
+                 </a
+      ><a name="244" class="Symbol"
+      >;</a
+      ><a name="245"
+      > </a
+      ><a name="246" class="Field"
+      >coh</a
+      ><a name="249"
+      > </a
+      ><a name="250" class="Symbol"
+      >=</a
+      ><a name="251"
+      > </a
+      ><a name="252" href="Ornament.List.html#544" class="Function"
+      >cohList</a
+      ><a name="259"
+      > </a
+      ><a name="260" class="Symbol"
+      >}</a
+      ><a name="261"
+      >
+      </a
+      ><a name="268" class="Keyword"
+      >where</a
+      ><a name="273"
+      > </a
+      ><a name="274" class="Keyword"
+      >open</a
+      ><a name="278"
+      > </a
+      ><a name="279" href="Signature.html#261" class="Module"
+      >Sig</a
+      ><a name="282"
+      > </a
+      ><a name="283" href="Signature.Nat.html#154" class="Function"
+      >&#931;Nat</a
+      ><a name="287"
+      >
+
+            </a
+      ><a name="301" href="Ornament.List.html#301" class="Function"
+      >extendList</a
+      ><a name="311"
+      > </a
+      ><a name="312" class="Symbol"
+      >:</a
+      ><a name="313"
+      > </a
+      ><a name="314" class="Symbol"
+      >(</a
+      ><a name="315" href="Ornament.List.html#315" class="Bound"
+      >tt</a
+      ><a name="317"
+      > </a
+      ><a name="318" class="Symbol"
+      >:</a
+      ><a name="319"
+      > </a
+      ><a name="320" href="Stdlib.html#718" class="Record"
+      >&#8868;</a
+      ><a name="321" class="Symbol"
+      >)</a
+      ><a name="322"
+      > </a
+      ><a name="323" class="Symbol"
+      >&#8594;</a
+      ><a name="324"
+      > </a
+      ><a name="325" href="Signature.html#320" class="Function"
+      >Op</a
+      ><a name="327"
+      > </a
+      ><a name="328" href="Ornament.List.html#315" class="Bound"
+      >tt</a
+      ><a name="330"
+      > </a
+      ><a name="331" class="Symbol"
+      >&#8594;</a
+      ><a name="332"
+      > </a
+      ><a name="333" class="PrimitiveType"
+      >Set</a
+      ><a name="336"
+      >
+            </a
+      ><a name="349" href="Ornament.List.html#301" class="Function"
+      >extendList</a
+      ><a name="359"
+      > </a
+      ><a name="360" href="Stdlib.html#746" class="InductiveConstructor"
+      >tt</a
+      ><a name="362"
+      > </a
+      ><a name="363" class="Symbol"
+      >(</a
+      ><a name="364" href="Stdlib.html#904" class="InductiveConstructor"
+      >inj&#8321;</a
+      ><a name="368"
+      > </a
+      ><a name="369" href="Stdlib.html#746" class="InductiveConstructor"
+      >tt</a
+      ><a name="371" class="Symbol"
+      >)</a
+      ><a name="372"
+      > </a
+      ><a name="373" class="Symbol"
+      >=</a
+      ><a name="374"
+      > </a
+      ><a name="375" href="Stdlib.html#718" class="Record"
+      >&#8868;</a
+      ><a name="376"
+      >
+            </a
+      ><a name="389" href="Ornament.List.html#301" class="Function"
+      >extendList</a
+      ><a name="399"
+      > </a
+      ><a name="400" href="Stdlib.html#746" class="InductiveConstructor"
+      >tt</a
+      ><a name="402"
+      > </a
+      ><a name="403" class="Symbol"
+      >(</a
+      ><a name="404" href="Stdlib.html#929" class="InductiveConstructor"
+      >inj&#8322;</a
+      ><a name="408"
+      > </a
+      ><a name="409" href="Stdlib.html#746" class="InductiveConstructor"
+      >tt</a
+      ><a name="411" class="Symbol"
+      >)</a
+      ><a name="412"
+      > </a
+      ><a name="413" class="Symbol"
+      >=</a
+      ><a name="414"
+      > </a
+      ><a name="415" href="Ornament.List.html#153" class="Bound"
+      >A</a
+      ><a name="416"
+      >
+
+            </a
+      ><a name="430" href="Ornament.List.html#430" class="Function"
+      >refineList</a
+      ><a name="440"
+      > </a
+      ><a name="441" class="Symbol"
+      >:</a
+      ><a name="442"
+      > </a
+      ><a name="443" class="Symbol"
+      >(</a
+      ><a name="444" href="Ornament.List.html#444" class="Bound"
+      >tt</a
+      ><a name="446"
+      > </a
+      ><a name="447" class="Symbol"
+      >:</a
+      ><a name="448"
+      > </a
+      ><a name="449" href="Stdlib.html#718" class="Record"
+      >&#8868;</a
+      ><a name="450" class="Symbol"
+      >)(</a
+      ><a name="452" href="Ornament.List.html#452" class="Bound"
+      >op</a
+      ><a name="454"
+      > </a
+      ><a name="455" class="Symbol"
+      >:</a
+      ><a name="456"
+      > </a
+      ><a name="457" href="Signature.html#320" class="Function"
+      >Op</a
+      ><a name="459"
+      > </a
+      ><a name="460" href="Ornament.List.html#444" class="Bound"
+      >tt</a
+      ><a name="462" class="Symbol"
+      >)</a
+      ><a name="463"
+      > </a
+      ><a name="464" class="Symbol"
+      >&#8594;</a
+      ><a name="465"
+      > </a
+      ><a name="466" href="Ornament.List.html#301" class="Function"
+      >extendList</a
+      ><a name="476"
+      > </a
+      ><a name="477" href="Ornament.List.html#444" class="Bound"
+      >tt</a
+      ><a name="479"
+      > </a
+      ><a name="480" href="Ornament.List.html#452" class="Bound"
+      >op</a
+      ><a name="482"
+      > </a
+      ><a name="483" class="Symbol"
+      >&#8594;</a
+      ><a name="484"
+      > </a
+      ><a name="485" href="Signature.html#343" class="Function"
+      >Ar</a
+      ><a name="487"
+      > </a
+      ><a name="488" href="Ornament.List.html#452" class="Bound"
+      >op</a
+      ><a name="490"
+      > </a
+      ><a name="491" class="Symbol"
+      >&#8594;</a
+      ><a name="492"
+      > </a
+      ><a name="493" href="Stdlib.html#718" class="Record"
+      >&#8868;</a
+      ><a name="494"
+      >
+            </a
+      ><a name="507" href="Ornament.List.html#430" class="Function"
+      >refineList</a
+      ><a name="517"
+      > </a
+      ><a name="518" class="Symbol"
+      >_</a
+      ><a name="519"
+      > </a
+      ><a name="520" class="Symbol"
+      >_</a
+      ><a name="521"
+      > </a
+      ><a name="522" class="Symbol"
+      >_</a
+      ><a name="523"
+      > </a
+      ><a name="524" class="Symbol"
+      >_</a
+      ><a name="525"
+      > </a
+      ><a name="526" class="Symbol"
+      >=</a
+      ><a name="527"
+      > </a
+      ><a name="528" href="Stdlib.html#746" class="InductiveConstructor"
+      >tt</a
+      ><a name="530"
+      >
+
+            </a
+      ><a name="544" href="Ornament.List.html#544" class="Function"
+      >cohList</a
+      ><a name="551"
+      > </a
+      ><a name="552" class="Symbol"
+      >:</a
+      ><a name="553"
+      > </a
+      ><a name="554" class="Symbol"
+      >(</a
+      ><a name="555" href="Ornament.List.html#555" class="Bound"
+      >tt</a
+      ><a name="557"
+      > </a
+      ><a name="558" class="Symbol"
+      >:</a
+      ><a name="559"
+      > </a
+      ><a name="560" href="Stdlib.html#718" class="Record"
+      >&#8868;</a
+      ><a name="561" class="Symbol"
+      >)(</a
+      ><a name="563" href="Ornament.List.html#563" class="Bound"
+      >op</a
+      ><a name="565"
+      > </a
+      ><a name="566" class="Symbol"
+      >:</a
+      ><a name="567"
+      > </a
+      ><a name="568" href="Signature.html#320" class="Function"
+      >Op</a
+      ><a name="570"
+      > </a
+      ><a name="571" href="Ornament.List.html#555" class="Bound"
+      >tt</a
+      ><a name="573" class="Symbol"
+      >)(</a
+      ><a name="575" href="Ornament.List.html#575" class="Bound"
+      >ext</a
+      ><a name="578"
+      > </a
+      ><a name="579" class="Symbol"
+      >:</a
+      ><a name="580"
+      > </a
+      ><a name="581" href="Ornament.List.html#301" class="Function"
+      >extendList</a
+      ><a name="591"
+      > </a
+      ><a name="592" href="Ornament.List.html#555" class="Bound"
+      >tt</a
+      ><a name="594"
+      > </a
+      ><a name="595" href="Ornament.List.html#563" class="Bound"
+      >op</a
+      ><a name="597" class="Symbol"
+      >)</a
+      ><a name="598"
+      >
+                </a
+      ><a name="615" class="Symbol"
+      >(</a
+      ><a name="616" href="Ornament.List.html#616" class="Bound"
+      >ar</a
+      ><a name="618"
+      > </a
+      ><a name="619" class="Symbol"
+      >:</a
+      ><a name="620"
+      > </a
+      ><a name="621" href="Signature.html#343" class="Function"
+      >Ar</a
+      ><a name="623"
+      > </a
+      ><a name="624" href="Ornament.List.html#563" class="Bound"
+      >op</a
+      ><a name="626" class="Symbol"
+      >)</a
+      ><a name="627"
+      > </a
+      ><a name="628" class="Symbol"
+      >&#8594;</a
+      ><a name="629"
+      > </a
+      ><a name="630" href="Ornament.List.html#555" class="Bound"
+      >tt</a
+      ><a name="632"
+      > </a
+      ><a name="633" href="Stdlib.html#1013" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="634"
+      > </a
+      ><a name="635" href="Signature.html#371" class="Function"
+      >Ty</a
+      ><a name="637"
+      > </a
+      ><a name="638" href="Ornament.List.html#616" class="Bound"
+      >ar</a
+      ><a name="640"
+      >
+            </a
+      ><a name="653" href="Ornament.List.html#544" class="Function"
+      >cohList</a
+      ><a name="660"
+      > </a
+      ><a name="661" href="Stdlib.html#746" class="InductiveConstructor"
+      >tt</a
+      ><a name="663"
+      > </a
+      ><a name="664" href="Ornament.List.html#664" class="Bound"
+      >op</a
+      ><a name="666"
+      > </a
+      ><a name="667" href="Ornament.List.html#667" class="Bound"
+      >ext</a
+      ><a name="670"
+      > </a
+      ><a name="671" href="Ornament.List.html#671" class="Bound"
+      >arr</a
+      ><a name="674"
+      > </a
+      ><a name="675" class="Symbol"
+      >=</a
+      ><a name="676"
+      > </a
+      ><a name="677" href="Stdlib.html#1061" class="InductiveConstructor"
+      >refl</a
+      ><a name="681"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>

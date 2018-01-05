@@ -1,0 +1,797 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><title
+    >Cartesian</title
+    ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><meta http-equiv="Content-Style-Type" content="text/css"
+     /><link href="Agda.css" rel="stylesheet" type="text/css"
+     /></head
+  ><body
+  ><pre
+    ><a name="1" class="Keyword"
+      >module</a
+      ><a name="7"
+      > </a
+      ><a name="8" href="Cartesian.html#1" class="Module"
+      >Cartesian</a
+      ><a name="17"
+      > </a
+      ><a name="18" class="Keyword"
+      >where</a
+      ><a name="23"
+      >
+
+</a
+      ><a name="25" class="Keyword"
+      >open</a
+      ><a name="29"
+      > </a
+      ><a name="30" class="Keyword"
+      >import</a
+      ><a name="36"
+      > </a
+      ><a name="37" class="Module"
+      >Stdlib</a
+      ><a name="43"
+      >
+</a
+      ><a name="44" class="Keyword"
+      >open</a
+      ><a name="48"
+      > </a
+      ><a name="49" class="Keyword"
+      >import</a
+      ><a name="55"
+      > </a
+      ><a name="56" href="Signature.html#1" class="Module"
+      >Signature</a
+      ><a name="65"
+      > </a
+      ><a name="66" class="Keyword"
+      >hiding</a
+      ><a name="72"
+      > </a
+      ><a name="73" class="Symbol"
+      >(</a
+      ><a name="74"
+      >_&#8728;_</a
+      ><a name="77" class="Symbol"
+      >)</a
+      ><a name="78"
+      >
+
+</a
+      ><a name="80" class="Keyword"
+      >record</a
+      ><a name="86"
+      > </a
+      ><a name="87" href="Cartesian.html#87" class="Record"
+      >Cartesian</a
+      ><a name="96"
+      > </a
+      ><a name="97" class="Symbol"
+      >{</a
+      ><a name="98" href="Cartesian.html#98" class="Bound"
+      >I&#8314;</a
+      ><a name="100"
+      > </a
+      ><a name="101" href="Cartesian.html#101" class="Bound"
+      >I</a
+      ><a name="102" class="Symbol"
+      >}(</a
+      ><a name="104" href="Cartesian.html#104" class="Bound"
+      >&#931;&#8314;</a
+      ><a name="106"
+      > </a
+      ><a name="107" class="Symbol"
+      >:</a
+      ><a name="108"
+      > </a
+      ><a name="109" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="112"
+      > </a
+      ><a name="113" href="Cartesian.html#98" class="Bound"
+      >I&#8314;</a
+      ><a name="115" class="Symbol"
+      >)(</a
+      ><a name="117" href="Cartesian.html#117" class="Bound"
+      >&#931;</a
+      ><a name="118"
+      > </a
+      ><a name="119" class="Symbol"
+      >:</a
+      ><a name="120"
+      > </a
+      ><a name="121" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="124"
+      > </a
+      ><a name="125" href="Cartesian.html#101" class="Bound"
+      >I</a
+      ><a name="126" class="Symbol"
+      >)(</a
+      ><a name="128" href="Cartesian.html#128" class="Bound"
+      >u</a
+      ><a name="129"
+      > </a
+      ><a name="130" class="Symbol"
+      >:</a
+      ><a name="131"
+      > </a
+      ><a name="132" href="Cartesian.html#98" class="Bound"
+      >I&#8314;</a
+      ><a name="134"
+      > </a
+      ><a name="135" class="Symbol"
+      >&#8594;</a
+      ><a name="136"
+      > </a
+      ><a name="137" href="Cartesian.html#101" class="Bound"
+      >I</a
+      ><a name="138" class="Symbol"
+      >)</a
+      ><a name="139"
+      > </a
+      ><a name="140" class="Symbol"
+      >:</a
+      ><a name="141"
+      > </a
+      ><a name="142" class="PrimitiveType"
+      >Set&#8321;</a
+      ><a name="146"
+      > </a
+      ><a name="147" class="Keyword"
+      >where</a
+      ><a name="152"
+      >
+  </a
+      ><a name="155" class="Keyword"
+      >open</a
+      ><a name="159"
+      > </a
+      ><a name="160" href="Signature.html#261" class="Module"
+      >Sig</a
+      ><a name="163"
+      >
+  </a
+      ><a name="166" class="Keyword"
+      >field</a
+      ><a name="171"
+      >
+    </a
+      ><a name="176" href="Cartesian.html#176" class="Field"
+      >&#963;</a
+      ><a name="177"
+      >   </a
+      ><a name="180" class="Symbol"
+      >:</a
+      ><a name="181"
+      > </a
+      ><a name="182" class="Symbol"
+      >&#8704;</a
+      ><a name="183"
+      > </a
+      ><a name="184" href="Cartesian.html#184" class="Bound"
+      >i&#8314;</a
+      ><a name="186"
+      > </a
+      ><a name="187" class="Symbol"
+      >&#8594;</a
+      ><a name="188"
+      > </a
+      ><a name="189" href="Signature.html#320" class="Field"
+      >Op</a
+      ><a name="191"
+      > </a
+      ><a name="192" href="Cartesian.html#104" class="Bound"
+      >&#931;&#8314;</a
+      ><a name="194"
+      > </a
+      ><a name="195" href="Cartesian.html#184" class="Bound"
+      >i&#8314;</a
+      ><a name="197"
+      > </a
+      ><a name="198" class="Symbol"
+      >&#8594;</a
+      ><a name="199"
+      > </a
+      ><a name="200" href="Signature.html#320" class="Field"
+      >Op</a
+      ><a name="202"
+      > </a
+      ><a name="203" href="Cartesian.html#117" class="Bound"
+      >&#931;</a
+      ><a name="204"
+      > </a
+      ><a name="205" class="Symbol"
+      >(</a
+      ><a name="206" href="Cartesian.html#128" class="Bound"
+      >u</a
+      ><a name="207"
+      > </a
+      ><a name="208" href="Cartesian.html#184" class="Bound"
+      >i&#8314;</a
+      ><a name="210" class="Symbol"
+      >)</a
+      ><a name="211"
+      >
+    </a
+      ><a name="216" href="Cartesian.html#216" class="Field"
+      >&#961;</a
+      ><a name="217"
+      >   </a
+      ><a name="220" class="Symbol"
+      >:</a
+      ><a name="221"
+      > </a
+      ><a name="222" class="Symbol"
+      >&#8704;</a
+      ><a name="223"
+      > </a
+      ><a name="224" href="Cartesian.html#224" class="Bound"
+      >i&#8314;</a
+      ><a name="226"
+      > </a
+      ><a name="227" class="Symbol"
+      >&#8594;</a
+      ><a name="228"
+      > </a
+      ><a name="229" class="Symbol"
+      >(</a
+      ><a name="230" href="Cartesian.html#230" class="Bound"
+      >op&#8314;</a
+      ><a name="233"
+      > </a
+      ><a name="234" class="Symbol"
+      >:</a
+      ><a name="235"
+      > </a
+      ><a name="236" href="Signature.html#320" class="Field"
+      >Op</a
+      ><a name="238"
+      > </a
+      ><a name="239" href="Cartesian.html#104" class="Bound"
+      >&#931;&#8314;</a
+      ><a name="241"
+      > </a
+      ><a name="242" href="Cartesian.html#224" class="Bound"
+      >i&#8314;</a
+      ><a name="244" class="Symbol"
+      >)</a
+      ><a name="245"
+      > </a
+      ><a name="246" class="Symbol"
+      >&#8594;</a
+      ><a name="247"
+      > </a
+      ><a name="248" href="Signature.html#343" class="Field"
+      >Ar</a
+      ><a name="250"
+      > </a
+      ><a name="251" href="Cartesian.html#117" class="Bound"
+      >&#931;</a
+      ><a name="252"
+      > </a
+      ><a name="253" class="Symbol"
+      >(</a
+      ><a name="254" href="Cartesian.html#176" class="Bound"
+      >&#963;</a
+      ><a name="255"
+      > </a
+      ><a name="256" href="Cartesian.html#224" class="Bound"
+      >i&#8314;</a
+      ><a name="258"
+      > </a
+      ><a name="259" href="Cartesian.html#230" class="Bound"
+      >op&#8314;</a
+      ><a name="262" class="Symbol"
+      >)</a
+      ><a name="263"
+      > </a
+      ><a name="264" href="Stdlib.html#1013" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="265"
+      > </a
+      ><a name="266" href="Signature.html#343" class="Field"
+      >Ar</a
+      ><a name="268"
+      > </a
+      ><a name="269" href="Cartesian.html#104" class="Bound"
+      >&#931;&#8314;</a
+      ><a name="271"
+      > </a
+      ><a name="272" href="Cartesian.html#230" class="Bound"
+      >op&#8314;</a
+      ><a name="275"
+      >
+    </a
+      ><a name="280" href="Cartesian.html#280" class="Field"
+      >coh</a
+      ><a name="283"
+      > </a
+      ><a name="284" class="Symbol"
+      >:</a
+      ><a name="285"
+      > </a
+      ><a name="286" class="Symbol"
+      >&#8704;</a
+      ><a name="287"
+      > </a
+      ><a name="288" href="Cartesian.html#288" class="Bound"
+      >i&#8314;</a
+      ><a name="290"
+      > </a
+      ><a name="291" href="Cartesian.html#291" class="Bound"
+      >op&#8314;</a
+      ><a name="294"
+      > </a
+      ><a name="295" class="Symbol"
+      >&#8594;</a
+      ><a name="296"
+      > </a
+      ><a name="297" class="Symbol"
+      >(</a
+      ><a name="298" href="Cartesian.html#298" class="Bound"
+      >ar</a
+      ><a name="300"
+      > </a
+      ><a name="301" class="Symbol"
+      >:</a
+      ><a name="302"
+      > </a
+      ><a name="303" href="Signature.html#343" class="Field"
+      >Ar</a
+      ><a name="305"
+      > </a
+      ><a name="306" href="Cartesian.html#117" class="Bound"
+      >&#931;</a
+      ><a name="307"
+      > </a
+      ><a name="308" class="Symbol"
+      >(</a
+      ><a name="309" href="Cartesian.html#176" class="Bound"
+      >&#963;</a
+      ><a name="310"
+      > </a
+      ><a name="311" href="Cartesian.html#288" class="Bound"
+      >i&#8314;</a
+      ><a name="313"
+      > </a
+      ><a name="314" href="Cartesian.html#291" class="Bound"
+      >op&#8314;</a
+      ><a name="317" class="Symbol"
+      >))</a
+      ><a name="319"
+      > </a
+      ><a name="320" class="Symbol"
+      >&#8594;</a
+      ><a name="321"
+      > 
+          </a
+      ><a name="333" href="Cartesian.html#128" class="Bound"
+      >u</a
+      ><a name="334"
+      > </a
+      ><a name="335" class="Symbol"
+      >(</a
+      ><a name="336" href="Signature.html#371" class="Field"
+      >Ty</a
+      ><a name="338"
+      > </a
+      ><a name="339" href="Cartesian.html#104" class="Bound"
+      >&#931;&#8314;</a
+      ><a name="341"
+      > </a
+      ><a name="342" class="Symbol"
+      >(</a
+      ><a name="343" href="Stdlib.html#1131" class="Function"
+      >subst</a
+      ><a name="348"
+      > </a
+      ><a name="349" href="Stdlib.html#1886" class="Function"
+      >id</a
+      ><a name="351"
+      > </a
+      ><a name="352" class="Symbol"
+      >(</a
+      ><a name="353" href="Cartesian.html#216" class="Bound"
+      >&#961;</a
+      ><a name="354"
+      > </a
+      ><a name="355" href="Cartesian.html#288" class="Bound"
+      >i&#8314;</a
+      ><a name="357"
+      > </a
+      ><a name="358" href="Cartesian.html#291" class="Bound"
+      >op&#8314;</a
+      ><a name="361" class="Symbol"
+      >)</a
+      ><a name="362"
+      > </a
+      ><a name="363" href="Cartesian.html#298" class="Bound"
+      >ar</a
+      ><a name="365" class="Symbol"
+      >))</a
+      ><a name="367"
+      > </a
+      ><a name="368" href="Stdlib.html#1013" class="Datatype Operator"
+      >&#8801;</a
+      ><a name="369"
+      > </a
+      ><a name="370" href="Signature.html#371" class="Field"
+      >Ty</a
+      ><a name="372"
+      > </a
+      ><a name="373" href="Cartesian.html#117" class="Bound"
+      >&#931;</a
+      ><a name="374"
+      > </a
+      ><a name="375" href="Cartesian.html#298" class="Bound"
+      >ar</a
+      ><a name="377"
+      >
+
+</a
+      ><a name="379" href="Cartesian.html#379" class="Function Operator"
+      >&#10214;_&#10215;C</a
+      ><a name="383"
+      > </a
+      ><a name="384" class="Symbol"
+      >:</a
+      ><a name="385"
+      > </a
+      ><a name="386" class="Symbol"
+      >&#8704;{</a
+      ><a name="388" href="Cartesian.html#388" class="Bound"
+      >I&#8314;</a
+      ><a name="390"
+      > </a
+      ><a name="391" href="Cartesian.html#391" class="Bound"
+      >I</a
+      ><a name="392" class="Symbol"
+      >}{</a
+      ><a name="394" href="Cartesian.html#394" class="Bound"
+      >&#931;&#8314;</a
+      ><a name="396"
+      > </a
+      ><a name="397" class="Symbol"
+      >:</a
+      ><a name="398"
+      > </a
+      ><a name="399" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="402"
+      > </a
+      ><a name="403" href="Cartesian.html#388" class="Bound"
+      >I&#8314;</a
+      ><a name="405" class="Symbol"
+      >}{</a
+      ><a name="407" href="Cartesian.html#407" class="Bound"
+      >&#931;</a
+      ><a name="408"
+      > </a
+      ><a name="409" class="Symbol"
+      >:</a
+      ><a name="410"
+      > </a
+      ><a name="411" href="Signature.html#261" class="Record"
+      >Sig</a
+      ><a name="414"
+      > </a
+      ><a name="415" href="Cartesian.html#391" class="Bound"
+      >I</a
+      ><a name="416" class="Symbol"
+      >}{</a
+      ><a name="418" href="Cartesian.html#418" class="Bound"
+      >u</a
+      ><a name="419"
+      > </a
+      ><a name="420" class="Symbol"
+      >:</a
+      ><a name="421"
+      > </a
+      ><a name="422" href="Cartesian.html#388" class="Bound"
+      >I&#8314;</a
+      ><a name="424"
+      > </a
+      ><a name="425" class="Symbol"
+      >&#8594;</a
+      ><a name="426"
+      > </a
+      ><a name="427" href="Cartesian.html#391" class="Bound"
+      >I</a
+      ><a name="428" class="Symbol"
+      >}</a
+      ><a name="429"
+      > </a
+      ><a name="430" class="Symbol"
+      >&#8594;</a
+      ><a name="431"
+      > 
+       </a
+      ><a name="440" href="Cartesian.html#87" class="Record"
+      >Cartesian</a
+      ><a name="449"
+      > </a
+      ><a name="450" href="Cartesian.html#394" class="Bound"
+      >&#931;&#8314;</a
+      ><a name="452"
+      > </a
+      ><a name="453" href="Cartesian.html#407" class="Bound"
+      >&#931;</a
+      ><a name="454"
+      > </a
+      ><a name="455" href="Cartesian.html#418" class="Bound"
+      >u</a
+      ><a name="456"
+      > </a
+      ><a name="457" class="Symbol"
+      >&#8594;</a
+      ><a name="458"
+      > 
+       </a
+      ><a name="467" class="Symbol"
+      >(</a
+      ><a name="468" href="Cartesian.html#468" class="Bound"
+      >X</a
+      ><a name="469"
+      > </a
+      ><a name="470" class="Symbol"
+      >:</a
+      ><a name="471"
+      > </a
+      ><a name="472" href="Cartesian.html#391" class="Bound"
+      >I</a
+      ><a name="473"
+      > </a
+      ><a name="474" class="Symbol"
+      >&#8594;</a
+      ><a name="475"
+      > </a
+      ><a name="476" class="PrimitiveType"
+      >Set</a
+      ><a name="479" class="Symbol"
+      >)(</a
+      ><a name="481" href="Cartesian.html#481" class="Bound"
+      >i&#8314;</a
+      ><a name="483"
+      > </a
+      ><a name="484" class="Symbol"
+      >:</a
+      ><a name="485"
+      > </a
+      ><a name="486" href="Cartesian.html#388" class="Bound"
+      >I&#8314;</a
+      ><a name="488" class="Symbol"
+      >)</a
+      ><a name="489"
+      > </a
+      ><a name="490" class="Symbol"
+      >&#8594;</a
+      ><a name="491"
+      > </a
+      ><a name="492" href="Signature.html#407" class="Function Operator"
+      >&#10214;</a
+      ><a name="493"
+      > </a
+      ><a name="494" href="Cartesian.html#394" class="Bound"
+      >&#931;&#8314;</a
+      ><a name="496"
+      > </a
+      ><a name="497" href="Signature.html#407" class="Function Operator"
+      >&#10215;</a
+      ><a name="498"
+      > </a
+      ><a name="499" class="Symbol"
+      >(</a
+      ><a name="500" href="Cartesian.html#468" class="Bound"
+      >X</a
+      ><a name="501"
+      > </a
+      ><a name="502" href="Stdlib.html#1928" class="Function Operator"
+      >&#8728;</a
+      ><a name="503"
+      > </a
+      ><a name="504" href="Cartesian.html#418" class="Bound"
+      >u</a
+      ><a name="505" class="Symbol"
+      >)</a
+      ><a name="506"
+      > </a
+      ><a name="507" href="Cartesian.html#481" class="Bound"
+      >i&#8314;</a
+      ><a name="509"
+      > </a
+      ><a name="510" class="Symbol"
+      >&#8594;</a
+      ><a name="511"
+      > </a
+      ><a name="512" href="Signature.html#407" class="Function Operator"
+      >&#10214;</a
+      ><a name="513"
+      > </a
+      ><a name="514" href="Cartesian.html#407" class="Bound"
+      >&#931;</a
+      ><a name="515"
+      > </a
+      ><a name="516" href="Signature.html#407" class="Function Operator"
+      >&#10215;</a
+      ><a name="517"
+      > </a
+      ><a name="518" href="Cartesian.html#468" class="Bound"
+      >X</a
+      ><a name="519"
+      > </a
+      ><a name="520" class="Symbol"
+      >(</a
+      ><a name="521" href="Cartesian.html#418" class="Bound"
+      >u</a
+      ><a name="522"
+      > </a
+      ><a name="523" href="Cartesian.html#481" class="Bound"
+      >i&#8314;</a
+      ><a name="525" class="Symbol"
+      >)</a
+      ><a name="526"
+      >
+</a
+      ><a name="527" href="Cartesian.html#379" class="Function Operator"
+      >&#10214;</a
+      ><a name="528"
+      > </a
+      ><a name="529" href="Cartesian.html#529" class="Bound"
+      >&#964;</a
+      ><a name="530"
+      > </a
+      ><a name="531" href="Cartesian.html#379" class="Function Operator"
+      >&#10215;C</a
+      ><a name="533"
+      > </a
+      ><a name="534" href="Cartesian.html#534" class="Bound"
+      >X</a
+      ><a name="535"
+      > </a
+      ><a name="536" href="Cartesian.html#536" class="Bound"
+      >i&#8314;</a
+      ><a name="538"
+      > </a
+      ><a name="539" class="Symbol"
+      >(</a
+      ><a name="540" href="Cartesian.html#540" class="Bound"
+      >op&#8314;</a
+      ><a name="543"
+      > </a
+      ><a name="544" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="545"
+      > </a
+      ><a name="546" href="Cartesian.html#546" class="Bound"
+      >args&#8314;</a
+      ><a name="551" class="Symbol"
+      >)</a
+      ><a name="552"
+      > </a
+      ><a name="553" class="Symbol"
+      >=</a
+      ><a name="554"
+      > </a
+      ><a name="555" href="Cartesian.html#176" class="Function"
+      >&#963;</a
+      ><a name="556"
+      > </a
+      ><a name="557" href="Cartesian.html#536" class="Bound"
+      >i&#8314;</a
+      ><a name="559"
+      > </a
+      ><a name="560" href="Cartesian.html#540" class="Bound"
+      >op&#8314;</a
+      ><a name="563"
+      > </a
+      ><a name="564" href="Stdlib.html#270" class="InductiveConstructor Operator"
+      >,</a
+      ><a name="565"
+      > </a
+      ><a name="566" class="Symbol"
+      >&#955;</a
+      ><a name="567"
+      > </a
+      ><a name="568" href="Cartesian.html#568" class="Bound"
+      >ar</a
+      ><a name="570"
+      > </a
+      ><a name="571" class="Symbol"
+      >&#8594;</a
+      ><a name="572"
+      > 
+                                         </a
+      ><a name="615" href="Stdlib.html#1131" class="Function"
+      >subst</a
+      ><a name="620"
+      > </a
+      ><a name="621" href="Cartesian.html#534" class="Bound"
+      >X</a
+      ><a name="622"
+      > </a
+      ><a name="623" class="Symbol"
+      >(</a
+      ><a name="624" href="Cartesian.html#280" class="Function"
+      >coh</a
+      ><a name="627"
+      > </a
+      ><a name="628" href="Cartesian.html#536" class="Bound"
+      >i&#8314;</a
+      ><a name="630"
+      > </a
+      ><a name="631" href="Cartesian.html#540" class="Bound"
+      >op&#8314;</a
+      ><a name="634"
+      > </a
+      ><a name="635" href="Cartesian.html#568" class="Bound"
+      >ar</a
+      ><a name="637" class="Symbol"
+      >)</a
+      ><a name="638"
+      > 
+                                                 </a
+      ><a name="689" class="Symbol"
+      >(</a
+      ><a name="690" href="Cartesian.html#546" class="Bound"
+      >args&#8314;</a
+      ><a name="695"
+      > </a
+      ><a name="696" class="Symbol"
+      >(</a
+      ><a name="697" href="Stdlib.html#1131" class="Function"
+      >subst</a
+      ><a name="702"
+      > </a
+      ><a name="703" href="Stdlib.html#1886" class="Function"
+      >id</a
+      ><a name="705"
+      > </a
+      ><a name="706" class="Symbol"
+      >(</a
+      ><a name="707" href="Cartesian.html#216" class="Function"
+      >&#961;</a
+      ><a name="708"
+      > </a
+      ><a name="709" href="Cartesian.html#536" class="Bound"
+      >i&#8314;</a
+      ><a name="711"
+      > </a
+      ><a name="712" href="Cartesian.html#540" class="Bound"
+      >op&#8314;</a
+      ><a name="715" class="Symbol"
+      >)</a
+      ><a name="716"
+      > </a
+      ><a name="717" href="Cartesian.html#568" class="Bound"
+      >ar</a
+      ><a name="719" class="Symbol"
+      >))</a
+      ><a name="721"
+      >
+  </a
+      ><a name="724" class="Keyword"
+      >where</a
+      ><a name="729"
+      > </a
+      ><a name="730" class="Keyword"
+      >open</a
+      ><a name="734"
+      > </a
+      ><a name="735" href="Cartesian.html#87" class="Module"
+      >Cartesian</a
+      ><a name="744"
+      > </a
+      ><a name="745" href="Cartesian.html#529" class="Bound"
+      >&#964;</a
+      ><a name="746"
+      >
+</a
+      ></pre
+    ></body
+  ></html
+>
