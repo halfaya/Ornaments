@@ -1,3 +1,6 @@
+{-# OPTIONS --without-K #-}
+{-# OPTIONS --allow-unsolved-metas #-} -- TODO: remove
+
 module Equivalence where
 
 open import Agda.Primitive                        using (Level; lzero; lsuc; _⊔_)
@@ -22,6 +25,16 @@ infix 4 _≃_
 
 _↑_ : {a b : Level} {A : Set a} {B : Set b} → (A ≃ B) → A → B
 e ↑ a = func e a
+
+--------
+
+≃sym : {a b : Level} {A : Set a} {B : Set b} → A ≃ B → B ≃ A
+≃sym (record {func = f; isEquiv = e}) =
+  record {func = f⁻¹ e;
+          isEquiv = record {f⁻¹  = f;
+                            sect = retr e;
+                            retr = sect e;
+                            adj  = let x = adj e in {!!}}}
 
 --------
 

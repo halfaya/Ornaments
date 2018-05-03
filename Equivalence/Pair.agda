@@ -1,3 +1,5 @@
+{-# OPTIONS --without-K #-}
+
 module Pair where
 
 open import Agda.Primitive                        using (Level; lzero; lsuc; _⊔_)
