@@ -37,7 +37,7 @@ swapEquiv : {a b : Level} {A : Set a} {B : Set b} → Pair A B ≃ Pair B A
 swapEquiv = record {func = swap; isEquiv = swapIsEquiv}
 
 swap≈ : {a b : Level} {A : Set a} {B : Set b} → REL (Pair A B) (Pair B A) (a ⊔ b)
-swap≈ p q = p ≡ (swapEquiv ↑ q)
+swap≈ p q = swapEquiv ↑ p ≡ q
 
 swapURcoh : {a b : Level} {A : Set a} {B : Set b} → URcoh (Pair A B) (Pair B A) swapEquiv swap≈
 swapURcoh =
