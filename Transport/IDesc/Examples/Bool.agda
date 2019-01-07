@@ -16,8 +16,8 @@ open import IDesc.Fixpoint
 BoolD : func ⊤ ⊤
 BoolD = func.mk λ _ → 
         `σ 2 (λ { zero → `1 
-                ; (suc zero) → `1 
-                ; (suc (suc ())) })
+                ; (suc zero) → `1 })
+--                ; (suc (suc ())) })
 
 Bool : Set 
 Bool = μ BoolD tt

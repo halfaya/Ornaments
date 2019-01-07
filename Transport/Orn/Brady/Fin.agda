@@ -8,7 +8,7 @@ open import Data.Empty
 open import Data.Unit
 open import Data.Nat
 open import Data.Fin hiding (lift) renaming (zero to zeF ; suc to suF)
-open import Data.Vec
+open import Data.Vec hiding (insert)
 open import Data.Product
 
 open import Relation.Binary.PropositionalEquality

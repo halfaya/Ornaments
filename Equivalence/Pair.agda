@@ -42,8 +42,8 @@ swap≈ p q = swapEquiv ↑ p ≡ q
 swapURcoh : {a b : Level} {A : Set a} {B : Set b} → URcoh (Pair A B) (Pair B A) swapEquiv swap≈
 swapURcoh =
   record {urCoh = λ _ _ →
-    record {func    = id;
-            isEquiv = record {f⁻¹  = id;
+    record {func    = ?;
+            isEquiv = record {f⁻¹  = ?;
                               sect = λ _ → refl;
                               retr = λ _ → refl;
                               adj  = λ _ → refl}}}

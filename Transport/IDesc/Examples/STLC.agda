@@ -5,7 +5,7 @@ module IDesc.Examples.STLC where
 open import Data.Unit
 open import Data.Nat
 open import Data.Fin
-open import Data.Vec hiding (_∈_ ; module _∈_)
+open import Data.Vec
 open import Data.Product
 open import Data.List
 

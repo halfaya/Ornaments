@@ -19,8 +19,8 @@ NatD : func ⊤ ⊤
 NatD = func.mk λ _ →
        `σ 2 
           (λ { zero → `1 
-             ; (suc zero) → `var tt
-             ; (suc (suc ())) })
+             ; (suc zero) → `var tt })
+--             ; (suc (suc ())) })
 
 Nat : Set
 Nat = μ NatD tt

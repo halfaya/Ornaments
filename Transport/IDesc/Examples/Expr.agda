@@ -5,7 +5,7 @@ module IDesc.Examples.Expr where
 open import Data.Unit hiding (_≟_)
 open import Data.Bool hiding (_≟_)
 open import Data.Nat hiding (_≟_)
-open import Data.Fin hiding (lift)
+open import Data.Fin hiding (lift; _≟_)
 open import Data.Vec 
 open import Data.Product
 
