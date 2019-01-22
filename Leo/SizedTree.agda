@@ -10,6 +10,10 @@ module Model where
     leaf : SizedTree A zero
     node : {m n : ℕ}(a : A)(lb : SizedTree A m)(rb : SizedTree A n) → SizedTree A (suc (m + n))
 
+  data SizedTreeIndexFirst (A : Set) : ℕ → Set where
+    leaf : SizedTreeIndexFirst A zero
+    node : (k : ℕ){m n : ℕ}(a : A)(lb : SizedTreeIndexFirst A m)(rb : SizedTreeIndexFirst A n) → k ≡ m + n → SizedTreeIndexFirst A (suc k)
+
 ΣSizedTree : Set → Sig ℕ
 ΣSizedTree A = OpSizedTree ◃ (λ {n} → ArSizedTree n) / (λ {n}{op} → TySizedTree n op)
   where OpSizedTree : ℕ → Set

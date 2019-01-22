@@ -11,7 +11,7 @@ open import Equivalence
 Define positive numbers in a standard way.
 Note that n > 0 desugars to 1 ≤ n.
 -}
-n
+
 ℙ : Set
 ℙ = Σ ℕ (λ n → n > 0)
 
@@ -46,9 +46,25 @@ adjℕ→ℙ n = refl
 
 {-
 Addition for positive numbers.
-x-}
+-}
+
+infixl 6 _ℙ+_ _ℕℙ+_
 
 _ℙ+_ : ℙ → ℙ → ℙ
 (zero  , ()) ℙ+ (_ , _)
 (suc a , _)  ℙ+ (b , _) = suc a + b , s≤s z≤n
 
+-- + for ℕ lifted to ℙ
+_ℕℙ+_ : ℙ → ℙ → ℙ
+p ℕℙ+ q = ℕ→ℙ (ℙ→ℕ p + ℙ→ℕ q)
+
+-- functional inequivalance
+one two : ℙ
+one = (1 , s≤s z≤n)
+two = (2 , s≤s z≤n)
+
+1+1=2 : one ℙ+ one ≡ two
+1+1=2 = refl
+
+1+1=1 : one ℕℙ+ one ≡ one
+1+1=1 = refl

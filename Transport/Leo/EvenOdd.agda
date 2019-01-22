@@ -47,20 +47,43 @@ evenOrOdd2 (suc n)  = evenOrOdd-aux n (evenOrOdd1 n)
 
 ----
 
+{-
+Case tree for evenOrOdd:
+
+n : 0 → inj₁ even0
+    suc m : 0     → inj₂ odd1
+            suc k → evenOrOdd-aux k (evenOrOdd k)
+-}
+
+----
+
 natInd : (P : ℕ → Set) → P zero → ((n : ℕ) → P n → P (suc n)) → (n : ℕ) → P n
 natInd P z s zero    = z
 natInd P z s (suc n) = s n (natInd P z s n)
 
-SumInd : (A B : Set) → (P : A ⊎ B → Set) → ((a : A) → P (inj₁ a)) → ((b : B) → P (inj₂ b))  → (ab : A ⊎ B) → P ab
-SumInd A B P f g (inj₁ ab) = f ab
-SumInd A B P f g (inj₂ ab) = g ab
+sumInd : (A B : Set) → (P : A ⊎ B → Set) → ((a : A) → P (inj₁ a)) → ((b : B) → P (inj₂ b))  → (ab : A ⊎ B) → P ab
+sumInd A B P f g (inj₁ ab) = f ab
+sumInd A B P f g (inj₂ ab) = g ab
 
+evenOrOdd-auxI : (n : ℕ) → Even n ⊎ Odd n → Even (suc (suc n)) ⊎ Odd (suc (suc n))
+evenOrOdd-auxI n =
+  sumInd
+    (Even n)
+    (Odd n)
+    (λ _ → Even (suc (suc n)) ⊎ Odd (suc (suc n)))
+    (λ a → inj₁ (evenSS a))
+    (λ b → inj₂ (oddSS b))
+
+Belowℕ : (P : ℕ → Set) → ℕ → Set
+Belowℕ P zero    = ⊤
+Belowℕ P (suc n) = Belowℕ P n
+
+
+{-
 evenOrOddI : (n : ℕ) → Even n ⊎ Odd n
-evenOrOddI n =
+evenOrOddI =
   natInd
     (λ (n : ℕ) → Even n ⊎ Odd n)
     (inj₁ even0)
     (natInd (λ (n : ℕ) → {!!}) {!!} {!!} {!!})
-    n
-
-
+-}
