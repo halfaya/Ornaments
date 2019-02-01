@@ -1,5 +1,7 @@
 {-# OPTIONS --without-K #-}
 
+module Positive where
+
 open import Data.Nat
 open import Data.Product
 open import Function
@@ -34,7 +36,7 @@ Construct the rest of the equivalance.
 ℕ→ℙ→ℕ : (n : ℕ) → (ℙ→ℕ ∘ ℕ→ℙ) n ≡ n
 ℕ→ℙ→ℕ n = refl
 
-ℙ→ℕ→ℙ : (p : ℙ) → (ℕ→ℙ ∘ ℙ→ℕ ) p ≡ p
+ℙ→ℕ→ℙ : (p : ℙ) → (ℕ→ℙ ∘ ℙ→ℕ) p ≡ p
 ℙ→ℕ→ℙ (zero  , ())
 ℙ→ℕ→ℙ (suc n , s≤s z≤n) = refl
 
@@ -68,3 +70,67 @@ two = (2 , s≤s z≤n)
 
 1+1=1 : one ℕℙ+ one ≡ one
 1+1=1 = refl
+
+-- double
+
+double : ℕ → ℕ
+double zero    = zero
+double (suc n) = suc (suc (double n))
+
+double' : ℕ → ℕ
+double' n = double (suc n)
+
+ℕℙdouble : ℙ → ℙ
+ℕℙdouble p = ℕ→ℙ (double (ℙ→ℕ p))
+
+ℕℙdouble' : ℙ → ℙ
+ℕℙdouble' p = ℕ→ℙ (double' (ℙ→ℕ p))
+
+x = ℕℙdouble' two
+
+-- Injection
+
+{-
+With injection, we map ℙ to ℕ directly
+((n , _) → n) but we also want to keep
+the proof of positivity which is best
+stored in a product type, so with this
+representation of ℙ the map is the
+identity function, which is trivially
+an equivalance.
+-}
+
+P→N : ℙ → Σ ℕ (λ n → n > 0)
+P→N p = p
+
+N→P : Σ ℕ (λ n → n > 0) → ℙ
+N→P p = p
+
+P→N→P : (p : ℙ) → (N→P ∘ P→N) p ≡ p
+P→N→P _ = refl
+
+N→P→N : (n : Σ ℕ (λ n → n > 0)) → (P→N ∘ N→P) n ≡ n
+N→P→N _ = refl
+
+adjP→N : (p : ℙ) → N→P→N (P→N p) ≡ cong P→N (P→N→P p)
+adjP→N _ = refl
+
+P≡N : IsEquiv ℙ (Σ ℕ (λ n → n > 0)) P→N
+N≡P = record { f⁻¹ = N→P ; sect = P→N→P ; retr = N→P→N  ; adj = adjP→N }
+
+{-
+What's more interesting is lifting.
+Plus can be lifted in 8 ways but assume we want the ℙ → ℙ → ℙ version.
+We transform the inputs to ℕ but keep the proofs.
+Then using the input ℕs and proofs we need to provide a proof that
+the output is positive. The hard part would be to automate proving
+the lemma below.
+-}
+
+lemma : (m n : Σ ℕ (λ n → n > 0)) → (proj₁ m + proj₁ n > 0)
+lemma (zero  , ()) _
+lemma (suc _ , _ ) _ = s≤s z≤n
+
+_P+_ : ℙ → ℙ → ℙ
+p P+ q = N→P (proj₁ (P→N p) + proj₁ (P→N q) , lemma (P→N p) (P→N q))
+
