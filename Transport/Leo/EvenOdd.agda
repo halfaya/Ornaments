@@ -22,7 +22,7 @@ data Odd : ℕ → Set where
   odd1  : Odd 1
   oddSS : {n : ℕ} → Odd n → Odd (suc (suc n))
 
--- original, naturdal definition in Agda
+-- original, natural definition in Agda
 evenOrOddWith : (n : ℕ) → Even n ⊎ Odd n
 evenOrOddWith zero       = inj₁ even0
 evenOrOddWith (suc zero) = inj₂ odd1
