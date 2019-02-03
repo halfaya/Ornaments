@@ -60,7 +60,7 @@ natInd : {ℓ : Level}(P : ℕ → Set ℓ) → P zero → ((n : ℕ) → P n �
 natInd P z s zero    = z
 natInd P z s (suc n) = s n (natInd P z s n)
 
--- "2-inducton" for ℕ
+-- "2-induction" for ℕ
 natInd2 : (P : ℕ → Set) → P zero → P (suc zero) → ((n : ℕ) → P n → P (suc n) → P (suc (suc n))) → (n : ℕ) → P n
 natInd2 P z o s zero          = z
 natInd2 P z o s (suc zero)    = o
