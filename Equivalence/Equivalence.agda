@@ -1,5 +1,4 @@
 {-# OPTIONS --without-K #-}
-{-# OPTIONS --allow-unsolved-metas #-} -- TODO: remove
 
 module Equivalence where
 
@@ -28,6 +27,7 @@ e ↑ a = func e a
 
 --------
 
+{-
 ≃sym : {a b : Level} {A : Set a} {B : Set b} → A ≃ B → B ≃ A
 ≃sym (record {func = f; isEquiv = e}) =
   record {func = f⁻¹ e;
@@ -35,6 +35,7 @@ e ↑ a = func e a
                             sect = retr e;
                             retr = sect e;
                             adj  = let x = adj e in {!!}}}
+-}
 
 --------
 
