@@ -144,11 +144,3 @@ evenOrOddI =
     (inj₁ even0)
     (inj₂ odd1)
     λ n h _ → evenOrOdd-auxI n h
-
-{-
-Case tree for evenOrOdd:
-
-n : 0 → inj₁ even0
-    suc m : 0     → inj₂ odd1
-            suc k → evenOrOdd-aux k (evenOrOdd k)
--}
