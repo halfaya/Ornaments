@@ -1,10 +1,14 @@
 {-# OPTIONS --without-K #-}
 
-module Leo.Pos2 where
+module Transport.Leo.Pos2 where
 
 open import Data.Bool
 open import Data.Nat
 open import Data.Product
+
+open import Equivalence.Equivalence
+
+open import Function
 
 open import Relation.Binary.PropositionalEquality
 
@@ -22,7 +26,50 @@ isPos : ℕ → Bool
 isPos zero    = false
 isPos (suc n) = true
 
--- this should be equivalent to the above two
+-- the following two should be equivalent
 ZeroPosΣ : Set
-ZeroPosΣ = Σ Bool (λ b → Σ ℕ (λ n → isPos n ≡ b))
+ZeroPosΣ = Σ Bool (λ b → ZeroPos b)
+
+ZeroPosΣ′ : Set
+ZeroPosΣ′ = Σ Bool (λ b → Σ ℕ (λ n → isPos n ≡ b))
+
+-- Equivalence between ZeroPos and ℕ
+
+ZP→N : ZeroPosΣ → ℕ
+ZP→N (false , zero)        = zero
+ZP→N (true  , suc zero)    = suc zero
+ZP→N (true  , suc (suc n)) = suc (ZP→N (true , suc n))
+
+{-
+makeSuc : Σ ZeroPosΣ (λ p → proj₁ p ≡ true) → ZeroPos true
+makeSuc ((false , zero) , ())
+makeSuc ((true , suc n) , refl) = suc n
+
+N⁺→ZP⁺ : Σ ℕ (λ n → n > 0) → Σ ZeroPosΣ (λ p → proj₁ p ≡ true)
+N⁺→ZP⁺ (zero , ())
+N⁺→ZP⁺ (suc zero    , s≤s z≤n) = (true , suc zero) , refl
+N⁺→ZP⁺ (suc (suc n) , s≤s z≤n) = let x = N⁺→ZP⁺ (suc n , s≤s z≤n) in {!!} , {!!}
+
+N→ZP : ℕ → ZeroPosΣ
+N→ZP zero    = false , zero
+N→ZP (suc n) = proj₁ (N⁺→ZP⁺ (suc n , s≤s z≤n))
+-}
+
+N→ZP : ℕ → ZeroPosΣ
+N→ZP zero    = false , zero
+N→ZP (suc n) = true  , suc (proj₂ (N→ZP n))
+
+ZP→N→ZP : (p : ZeroPosΣ) → (N→ZP ∘ ZP→N) p ≡ p
+ZP→N→ZP (false , zero)  = refl
+ZP→N→ZP (true  , suc n) = {!!}
+
+N→ZP→N : (n : ℕ) → (ZP→N ∘ N→ZP) n ≡ n
+N→ZP→N zero    = refl
+N→ZP→N (suc n) = let x = N→ZP→N n in {!!}
+
+adjZP→N : (p : ZeroPosΣ) → N→ZP→N (ZP→N p) ≡ cong ZP→N (ZP→N→ZP p)
+adjZP→N p = ?
+
+ZP≡N : IsEquiv ZeroPosΣ ℕ ZP→N
+ZP≡N = record { f⁻¹ = N→ZP ; sect = ZP→N→ZP ; retr = N→ZP→N  ; adj = adjZP→N }
 
