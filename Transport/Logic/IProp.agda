@@ -1,4 +1,4 @@
-{-# OPTIONS --without-K #-}
+--{-# OPTIONS --without-K #-}
 
 open import Level
   renaming ( zero to zeroL

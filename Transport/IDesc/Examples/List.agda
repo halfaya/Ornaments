@@ -28,4 +28,4 @@ nil : ∀{A} → List A
 nil = ⟨ zero , tt ⟩
 
 cons : ∀{A} → A → List A → List A
-cons a xs = ⟨ suc zero , a , xs ⟩ 
+cons a xs = ⟨ suc zero , a , xs ⟩

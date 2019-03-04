@@ -3,14 +3,10 @@
 module Leo.EvenOdd where
 
 open import Agda.Primitive using (Level; lzero; lsuc; _⊔_)
-open import Data.Fin
 open import Data.Nat
 open import Data.Product
 open import Data.Sum
 
-open import IDesc.IDesc
-open import IDesc.Examples.Nat
-open import IDesc.Fixpoint
 open import Agda.Builtin.Sigma
 open import Agda.Builtin.Unit
 

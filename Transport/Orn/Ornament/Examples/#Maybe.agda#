@@ -21,7 +21,7 @@ open import Orn.Ornament
 
 MaybeO : Set → orn BoolD id id 
 MaybeO A = orn.mk (λ _ → 
-           `σ (λ { zero → ? --insert A (λ _ → `1)
+           `σ (λ { zero → {!!} --insert A (λ _ → `1)
                  ; (suc zero) → `1
                  ; (suc (suc ())) }))
 

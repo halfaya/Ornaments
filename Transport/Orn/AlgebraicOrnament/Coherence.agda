@@ -1,4 +1,4 @@
-{-# OPTIONS --without-K #-}
+--{-# OPTIONS --without-K #-}
 
 open import Data.Nat
 open import Data.Fin hiding (fold ; lift )

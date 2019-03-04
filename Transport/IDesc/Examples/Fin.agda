@@ -34,7 +34,7 @@ module Constraint where
   Fin = μ FinD
 
   ze : ∀{n} → Fin (suc n)
-  ze = ⟨ zero , _ , refl , tt ⟩
+  ze = ⟨ zero , {!!} ⟩ --⟨ zero , {!!} , refl , tt ⟩
 
   su : ∀{n} → Fin n → Fin (suc n)
   su k = ⟨ suc zero , _ , refl , k ⟩ 

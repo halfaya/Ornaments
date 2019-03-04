@@ -18,12 +18,12 @@ data Orn {I K : Set}(u : I → K) : IDesc K → Set₁ where
   insert : ∀{D} → (S : Set )(D⁺ : S → Orn u D) → Orn u D
 
   -- Refine
-  `var : ∀{i} → (i⁻¹ : u ⁻¹ i) → Orn u (`var i)
+  `var : {k : K} → (k⁻¹ : u ⁻¹ k) → Orn u (`var k)
   
   -- Copy
   `1 : Orn u `1
   _`×_ : ∀{D D'} → (D⁺ : Orn u D)(D'⁺ : Orn u D') → Orn u (D `× D')
-  `σ : ∀{n T} → (T⁺ : (k : Fin n) → Orn u (T k)) → Orn u (`σ n T)
+  `σ : {n : ℕ}{T : Fin n → IDesc K} → (T⁺ : (k : Fin n) → Orn u (T k)) → Orn u (`σ n T)
   `Σ : ∀{S T} → (T⁺ : (s : S) → Orn u (T s)) → Orn u (`Σ S T)
   `Π : ∀{S T} → (T⁺ : (s : S) → Orn u (T s)) → Orn u (`Π S T)
 
@@ -36,7 +36,7 @@ data Orn {I K : Set}(u : I → K) : IDesc K → Set₁ where
                     Orn u (`σ n T)
 
 -- Paper: Definition 4.1
-⟦_⟧Orn : ∀{I K : Set}{u}{D : IDesc I} → Orn u D → IDesc  K
+⟦_⟧Orn : ∀{I K : Set}{u : I → K}{D : IDesc K} → Orn u D → IDesc  I
 ⟦ `1 ⟧Orn = `1
 ⟦ T⁺ `× T'⁺ ⟧Orn = ⟦ T⁺ ⟧Orn `× ⟦ T'⁺ ⟧Orn 
 ⟦ `σ {n} T⁺ ⟧Orn = `σ n ((λ D → ⟦ D ⟧Orn) ∘ T⁺)
