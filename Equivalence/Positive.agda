@@ -61,9 +61,12 @@ _ℕℙ+_ : ℙ → ℙ → ℙ
 p ℕℙ+ q = ℕ→ℙ (ℙ→ℕ p + ℙ→ℕ q)
 
 -- functional inequivalance
-one two : ℙ
-one = (1 , s≤s z≤n)
-two = (2 , s≤s z≤n)
+one two three four five : ℙ
+one   = (1 , s≤s z≤n)
+two   = (2 , s≤s z≤n)
+three = (3 , s≤s z≤n)
+four  = (4 , s≤s z≤n)
+five  = (5 , s≤s z≤n)
 
 1+1=2 : one ℙ+ one ≡ two
 1+1=2 = refl
@@ -86,7 +89,12 @@ double' n = double (suc n)
 ℕℙdouble' : ℙ → ℙ
 ℕℙdouble' p = ℕ→ℙ (double' (ℙ→ℕ p))
 
-x = ℕℙdouble' two
+-- functional inequivalence
+2*2=3 : ℕℙdouble two ≡ three
+2*2=3 = refl
+
+2*2=5 : ℕℙdouble' two ≡ five
+2*2=5 = refl
 
 -- Injection
 
@@ -116,7 +124,7 @@ adjP→N : (p : ℙ) → N→P→N (P→N p) ≡ cong P→N (P→N→P p)
 adjP→N _ = refl
 
 P≡N : IsEquiv ℙ (Σ ℕ (λ n → n > 0)) P→N
-N≡P = record { f⁻¹ = N→P ; sect = P→N→P ; retr = N→P→N  ; adj = adjP→N }
+P≡N = record { f⁻¹ = N→P ; sect = P→N→P ; retr = N→P→N  ; adj = adjP→N }
 
 {-
 What's more interesting is lifting.

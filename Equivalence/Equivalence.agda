@@ -1,6 +1,6 @@
 {-# OPTIONS --without-K #-}
 
-module Equivalence.Equivalence where
+module Equivalence where
 
 open import Agda.Primitive                        using (Level; lzero; lsuc; _⊔_)
 open import Function                              using (_∘_; id)
